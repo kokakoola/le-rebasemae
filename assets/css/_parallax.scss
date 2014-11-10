@@ -1,0 +1,55 @@
+// source: http://frozenrockets.nl/labs/parallax/
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  -moz-perspective: 1px;
+  -ms-perspective: 1px;
+  -o-perspective: 1px;
+  perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+  body * {
+    -webkit-perspective: 1px;
+    -moz-perspective: 1px;
+    -ms-perspective: 1px;
+    -o-perspective: 1px;
+    perspective: 1px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+
+.page {
+  position: relative;
+  top: 60%;
+  background-color: #FFF;
+  margin-top: 24%;
+ }
+
+.masthead {
+position: absolute;
+top: -20%;
+left: 0;
+right: 0;
+width: 100%;
+height: 60%;
+// padding-top: 20%;
+  -webkit-transform: translateZ(-0.9px) scale(1.9);
+  -moz-transform: translateZ(-0.9px) scale(1.9);
+  -ms-transform: translateZ(-0.9px) scale(1.9);
+  -o-transform: translateZ(-0.9px) scale(1.9);
+  transform: translateZ(-0.9px) scale(1.9);
+  z-index: -900;
+  text-align: center; }

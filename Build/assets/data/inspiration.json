@@ -1,0 +1,59 @@
+  Handlebars.registerHelper('leftTrim', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 20) return text.substring(0,20) +"...";
+    else return text;
+  });
+
+  var source   = $("#inspiration-template").html();
+  var template = Handlebars.compile(source); 
+
+
+  var data = { images: [
+    {
+      caption: "Tugipostid",
+      id: "tanikawa-house-kazuo-shinohara2",
+      description: "Kazuo Shinohara Tanikawa House"
+    },
+    {
+      caption: "Tugipostid",
+      id: "JAU_JA93_Kazuo-Shinohara_4",
+      description: "Kazuo Shinohara Tanikawa House"
+    },
+    {
+      caption: "Välisvärv",
+      id: "color1",
+      description: "Villa in Tsurudamari Karuizawa"
+    },
+    {
+      caption: "Välisvärv",
+      id: "color2",
+      description: "Villa in Tsurudamari Karuizawa"
+    },
+    {
+      caption: "Välisvärv",
+      id: "color3",
+      description: "Villa in Tsurudamari Karuizawa"
+    },
+    {
+      caption: "Välisvärv",
+      id: "color4",
+      description: "Villa in Tsurudamari Karuizawa"
+    },
+    {
+      caption: "Katus",
+      id: "1317218740-brn-07",
+      description: "House Morran by Johannes Norlander Arkitektur, Sweden"
+    },
+    {
+      caption: "Katus",
+      id: "1317218751-brn-08",
+      description: "House Morran by Johannes Norlander Arkitektur, Sweden"
+    },
+    {
+    caption: "Katus",
+      id: "1317218733-brn-05",
+      description: "House Morran by Johannes Norlander Arkitektur, Sweden"
+    }
+    ]};
+
+  $("#placeholder-inspiration").html(template(data));

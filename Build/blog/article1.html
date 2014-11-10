@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Foxhill House | Home :: mare</title>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  </script>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300, 400,700' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+<link href="assets/css/base.css" rel="stylesheet" type="text/css" media="all" />
+
+<script type="text/javascript" src="assets/js/modernizr.custom.28468.js"></script>
+<script src="assets/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cslider.js"></script>
+
+<script type="text/javascript"  src="assets/js/menu.js"></script>
+<script src="assets/js/fwslider.js"></script>
+<!--end slider -->
+<script type="text/javascript">
+$(document).ready(function() {
+  
+  var defaults = {
+          containerID: 'toTop', // fading element id
+          containerHoverID: 'toTopHover', // fading element hover id
+          scrollSpeed: 1200,
+          easingType: 'linear' 
+        };
+        
+        
+        $().UItoTop({ easingType: 'easeOutQuart' });
+        
+      });
+</script>
+
+
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+</head> 
+ / base url
+ / used in meta on every page
+ / used in meta
+ 
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+      <!-- <a class="navbar-brand page-scroll" href="#page-top">
+        <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
+      </a> -->
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li>
+          <a class="page-scroll" href="#about">Allikad</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="#download">Blogi</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="#contact">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav> 
+
+<article>
+<div class="container" id="main">
+
+<p>/ where is the article located
+ / page title
+ / for meta and summary
+ / publishing date
+ / reading time
+ / short-url for social sharing
+ / header image</p>
+
+<p>hhlafhdfjhl;f
+##hjsgd</p>
+
+<p>$published</p>
+
+<p><img src="&lt;!-- @path $headerimg --&gt;" /></p>
+ 
+
+</div>
+</article>
+
+
+<script type="text/javascript" src="assets/js/move-top.js"></script>
+<script type="text/javascript" src="assets/js/easing.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+  $(".scroll").click(function(event){   
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+  });
+});
+</script>
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+<script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
+<script src="assets/js/grayscale.js"></script> 

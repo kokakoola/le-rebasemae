@@ -1,0 +1,20 @@
+<script type="text/javascript" src="assets/js/move-top.js"></script>
+<script type="text/javascript" src="assets/js/easing.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+  $(".scroll").click(function(event){   
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+  });
+});
+</script>
+<script src="assets/js/handlebars-v2.0.0.js"></script>
+<script src="assets/data/inspiration.json"></script>
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+<script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
+<script src="assets/js/grayscale.js"></script>
+<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="assets/js/bootstrap-image-gallery.js"></script>
