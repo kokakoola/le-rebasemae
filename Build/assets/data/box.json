@@ -23,11 +23,31 @@
   var template = Handlebars.compile(source);
 
 
-  var data = { images: [
+  var data = { "images": [
     {
-      caption: "Siseviimistlus",
-      id: "katuseakna-pale",
-      description: "Katuseakna põse ja katuslae viimistlus"
+      "caption": "Siseviimistlus",
+      "id": "katuseakna-pale",
+      "description": "Katuseakna põse ja katuslae viimistlus"
+    },
+    {
+      "caption": "katuseakna paled",
+      "id": "katuseakna-pale-kald",
+      "description": "Kaldus paleviimistlus annab enam päikest"
+    },
+    {
+      "caption": "Pliit",
+      "id": "House_Riihi_Jussi_Tiainen_21",
+      "description": "Ilusa proportsiooniga krohvpliit"
+    },
+    {
+      "caption": "Akende paled seespoolt",
+      "id": "House_Riihi_Jussi_Tiainen_20",
+      "description": "Aken ja sein sama värvi/materjalin"
+    },
+    {
+      "caption": "Siseviimistlus",
+      "id": "RRA_Herfell-14©Lars_Petter_Pettersen+1",
+      "description": "Äge onn www.reiulframstadarchitects.com/micro-cluster-cabins"
     }
     ]};
 

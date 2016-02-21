@@ -7725,6 +7725,9 @@ section:not(.dark) {
     column-gap: 40px; }
   .posting a.button {
     display: inline-block;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
     margin-bottom: 20px;
     font-size: 0.8755em;
     color: #333;

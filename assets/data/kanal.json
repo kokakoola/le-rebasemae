@@ -1,0 +1,84 @@
+  Handlebars.registerHelper('leftTrim', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 20) return text.substring(0,20) +"...";
+    else return text;
+  });
+
+  Handlebars.registerHelper('slice', function(context, block) {
+    var ret = "",
+        offset = parseInt(block.hash.offset) || 0,
+        limit = parseInt(block.hash.limit) || 5,
+        i = (offset < context.length) ? offset : 0,
+        j = ((limit + offset) < context.length) ? (limit + offset) : context.length;
+
+    for(i,j; i<j; i++) {
+      ret += block.fn(context[i]);
+    }
+
+    return ret;
+  });
+
+
+  var source   = $("#kanal-template").html();
+  var template = Handlebars.compile(source);
+
+
+  var data = { "images": [
+    {
+      "caption": "Paigutus",
+      "id": "IMG_1814",
+      "description": "Kaevasin koha umbes ette"
+    },
+    {
+      "caption": "Paigutus",
+      "id": "IMG_1816",
+      "description": "Kaevasin koha umbes ette"
+    },
+    {
+      "caption": "Paigutus",
+      "id": "IMG_1817",
+      "description": "Kaevasin koha umbes ette"
+    },
+    {
+      "caption": "Paigutus",
+      "id": "IMG_1818",
+      "description": "Kaevasin koha umbes ette"
+    },
+    {
+      "caption": "Paigutus",
+      "id": "IMG_1819",
+      "description": "Kaevasin koha umbes ette"
+    },
+    {
+      "caption": "Paigaldus",
+      "id": "2015-08-31-13.30.30",
+      "description": "Remo kaevas sügavamaks ja paigaldas"
+    },
+    {
+      "caption": "Paigaldus",
+      "id": "2015-08-31-13.31.10",
+      "description": "Remo kaevas sügavamaks ja paigaldas"
+    },
+    {
+      "caption": "Paigaldus",
+      "id": "2015-08-31-16.31.09",
+      "description": "Remo kaevas sügavamaks ja paigaldas"
+    },
+    {
+      "caption": "Paigaldus",
+      "id": "2015-08-31-16.33.05",
+      "description": "Remo kaevas sügavamaks ja paigaldas"
+    },
+    {
+      "caption": "Paigaldus",
+      "id": "2015-08-31-16.33.07",
+      "description": "Remo kaevas sügavamaks ja paigaldas"
+    },
+    {
+      "caption": "Valminud",
+      "id": "IMG_1870",
+      "description": ""
+    }
+    ]};
+
+  $("#placeholder-kanal").html(template(data));

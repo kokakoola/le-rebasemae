@@ -2,65 +2,45 @@
 
 <!-- @include head.html -->
 
+<body id="page-top" style="overflow-x: hidden;">
+  <div class="masthead">
+    <div class="header_bg">
+      <!-- @include nav-sub -->
+    </div>
 
-    <body id="page-top">
-      <div style="overflow-x: hidden;">
-        <div class="masthead">
-          <div class="header_bg">
-            <!-- @include nav-sub -->
-          </div>
+    <div class="row slider slider-main">
+      <div class="col-sm-10 col-sm-offset-1">
+        <!-- @include bs-carousel -->
+      </div>
+    </div>
+  </div>
 
-          <div class="row slider slider-main">
-            <div class="col-sm-10 col-sm-offset-1">
-              <!-- @include bs-carousel -->
-              </div>
-          </div>
+  <section id="access">
+    <!-- @include accessibility -->
+  </section>
+
+  <section class="lightcolor" id="about">
+    <!-- @include about -->
+  </section>
+
+  <section id="inspiration">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- @include inspiration -->
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="page">
-          <section id="access">
-          <!-- @include accessibility -->
-          </section>
+  <section class="dark" id="contact">
+    <!-- @include footer -->
+  </section>
 
-          <!-- <div class="port">
-            <div id="map"></div>
-          </div> -->
-
-          <section class="lightcolor" id="about">
-            <!-- @include about -->
-          </section>
-
-          <!-- <section id="plans">
-            <div class="row slider">
-              <div class="col-sm-10 col-sm-offset-1">
-                @include bs-carousel-plans
-              </div>
-            </div>
-          </section> -->
-
-          <section id="inspiration">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12">
-                  <!-- @include inspiration -->
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="dark" id="contact">
-            <!-- @include footer -->
-          </section>
-
-          <!-- <section id="roadmap">
-           @include circles
-          </section> -->
-
-          <!-- @include footer-end -->
-        </div>
-
-        <!-- @include js-main -->
-        </div>
-    </body>
+  <!-- @include footer-end -->
+  
+  <!-- @include js-main -->
+  <script src="assets/data/inspiration.json"></script>
+</body>
 
 </html>
