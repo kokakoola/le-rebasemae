@@ -1,45 +1,17 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Foxhill House | Home :: mare</title>
-
-
+  <title>Le Rebasemae | Algus :: Mare</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
   </script>
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:300, 400,700' rel='stylesheet' type='text/css'>
-  <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-
-<link href="assets/css/bootstrap-image-gallery.css" rel="stylesheet" type="text/css" media="all" />
-<link href="assets/css/base.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="assets/js/modernizr.custom.28468.js"></script>
-<script src="assets/js/css3-mediaqueries.js"></script>
-<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.cslider.js"></script>
-
-<script type="text/javascript"  src="assets/js/menu.js"></script>
-<script src="assets/js/fwslider.js"></script>
-<!--end slider -->
-<script type="text/javascript">
-$(document).ready(function() {
-  
-  var defaults = {
-          containerID: 'toTop', // fading element id
-          containerHoverID: 'toTopHover', // fading element hover id
-          scrollSpeed: 1200,
-          easingType: 'linear' 
-        };
-        
-        
-        $().UItoTop({ easingType: 'easeOutQuart' });
-        
-      });
-</script>
+  <link rel="stylesheet" href="assets/css/blueimp-gallery.min.css" type="text/css" media="all">
+  <link href="assets/css/bootstrap-image-gallery.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="assets/css/base.css" rel="stylesheet" type="text/css" media="all" />
+  <script type="text/javascript" src="assets/js/modernizr.custom.28468.js"></script>
+  <script src="assets/js/css3-mediaqueries.js"></script>
 
 
         <!-- Hammer reload -->
@@ -49,12 +21,13 @@ $(document).ready(function() {
                 if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
                 ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
                 ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
                 ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
                       link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
                     }
                   }
@@ -70,71 +43,247 @@ $(document).ready(function() {
   <body id="page-top">
 
       <div class="header_bg">
-  <div class="header_bg">
+        <div class="header_bg">
+       <!-- http://www.bootply.com/Axbt2Y0LIQ -->
 
-    <div class="container">
+<div class="container">
 
-      <div class="header">
+  <div class="header">
 
-        <header id="topnav">
-          <nav>
-            <ul>
-              <li class="active"><a  href="#home">Algus</a></li>
-              <li><a href="#access" class="scroll">Asukoht</a></li>
-              <li><a href="#plans" class="scroll">Plaanid</a></li>
-              <li><a href="#about" class="scroll">Seletus</a></li>
-              <li><a href="#inspiration" class="scroll">Allikad</a></li>
-              <li><a href="#roadmap" class="scroll">Kulg</a></li>
-              <li class="last"><a href="#contact" class="scroll">Kontakt</a></li>
-
+    <header id="topnav">
+      <nav class="navbar navbar-inverse navbar-default" role="navigation" id="topmenu" class="mainmenu">
+        
+        <ul class="nav navbar-nav">
+          <li class='current-parent'>
+            <a class='current-parent'  href="index.html">Algus</a>
+          </li>
+          <li class="dropdown">
+            <a   class="dropdown-toggle" href="#!" id="drop" data-toggle="dropdown" aria-expanded="false" aria-controls="drop">Vundament</a>
+            <ul class="nav navbar-nav dropdown-menu" aria-labelledby="drop">
+              <li><a href="#basement-todo" class="scroll">Vaegtööd</a></li>
+              <li><a href="#basement-pics" class="scroll">Pildid</a></li>
+              <li><a href="#basement-done" class="scroll">Vundament</a></li>
+              <li><a href="#surrounding-done" class="scroll">Ligipääs ja plats</a></li>
+              <li><a href="#basement-contact" class="scroll">Kontaktid</a></li>
             </ul>
-          </nav>
-          <!-- <h1><a href="index.html">EHITUSPÄEVIK</a></h1> -->
-          <a href="#" id="navbtn">Nav Menu</a>
+          </li>
+          <li>
+            <a href="box.html">Karp</a>
+          </li>
+          <li>
+            <a  href="communications.html" class="disabled">Kommunikatsioonid</a>
+          </li>
+          <li>
+            <a  href="indoor.html" class="disabled">Sisetööd</a>
+          </li>
+          <li>
+            <a  href="finishing.html" class="disabled">Viimistlus</a>
+          </li>
 
-        </header>
 
-      </div>
+        </ul>
+      </nav>
 
-    </div>
+    </header> 
+
   </div>
 
 </div>
 
-      <section class="lightcolor">
-        <div class="posting" id="basement">
+
+
+      <div class="container submenu">
+  <nav class="navbar navbar-default" role="navigation" id="submenu">
+    <ul class="nav navbar-nav collapse" id="basement">
+      <li><a href="index.html/#access" class="scroll">Asukoht</a></li> 
+      <li><a href="index.html/#about" class="scroll">Seletus</a></li>
+      <li><a href="index.html/#plans" class="scroll">Plaanid</a></li>
+      <li><a href="index.html/#inspiration" class="scroll">Allikad</a></li>
+      <li><a href="index.html/#contact" class="scroll">Kontakt</a></li>
+      <li  class="last"><a href="index.html/#roadmap" class="scroll">Kulg</a></li>
+    </ul>
+  </nav>
+</div>
+        </div>
+      </div>
+
+    <section class="lightcolor" id="basement-todo">
+      <div class="posting" id="basement">
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center"> 
         
         <h3>VUNDAMENT JA LIGIPÄÄS</h3>
         <span> </span>
-        <p>august - oktoober 2014</p>
+        <p><strong>Teha veel</strong></p>
 
       </div>  
       <div class="row">
         <div class="col-md-8 text-left">
           <h4>Vundament</h4>
           
-          <p>Vundament on ehitatud 20 cm paksusest FIBO 5 kergplokist . Vundamendi all on 20 cm betoonist taldmik, selle all 16 fraktsiooniga killustikupadi. Aluspind on läbivalt liiv, umbes 1,2 m sügavusel on õhuke kiht huumust, siis looduslik kruus.
-            <br><br>
-            Enne põranda kinniehitamist tuleb puurida tuulutusavad vastavalt: <br>
-            "Loomuliku ventilatsiooni kasutamisel peavad tuulutusavad olema maapinnast vähemalt 200 mm kõrgusel. Avade vajalik suurus sõltub ka hoone paiknemisest tuulte suhtes. Tuultele avatud kohtades peab avade ristlõike- pindalaolemavähemalt0,05... 0,1m2 iga 100 m2 põrandapin- na kohta. Tuultele varjatud kohtades on vastavad arvud 0,1...0,2 m2.
-Põhjamaades esinevate normide kohaselt peaks põran- da alla jääma vähemalt 50 cm kõrge vaba ruum, mis on ühtlaselt tuulutatud. Mäenõlvadel asetsevatel hoonetel võib see ruum olla ühest otsast madalam, kuid mitte alla 35 cm. Pinnaseniiskuse tõkestamiseks eraldatakse kõik konstruktsioonielemendid hüdroisolatsiooniga." <a href="http://www.puuinfo.ee/artiklid/pdf/porandate_soojustamine.pdf">Allikas: Elar Vilt, "Põrandate soojustamisest"</a>
+          <p class="columned-2">
+            Enne karbiga alustamist tuleb puurida tuulutusavad vastavalt: <br>
+            "Loomuliku ventilatsiooni kasutamisel peavad tuulutusavad olema maapinnast vähemalt 200 mm kõrgusel. Avade vajalik suurus sõltub ka hoone paiknemisest tuulte suhtes. Tuultele avatud kohtades peab avade ristlõike- pindalaolemavähemalt0,05... 0,1m2 iga 100 m2 põrandapin- na kohta. Tuultele varjatud kohtades on vastavad arvud 0,1...0,2 m2. <br>
+            Põhjamaades esinevate normide kohaselt peaks põran- da alla jääma vähemalt 50 cm kõrge vaba ruum, mis on ühtlaselt tuulutatud. Mäenõlvadel asetsevatel hoonetel võib see ruum olla ühest otsast madalam, kuid mitte alla 35 cm. Pinnaseniiskuse tõkestamiseks eraldatakse kõik konstruktsioonielemendid hüdroisolatsiooniga." <br><br>
+            <a href="http://www.puuinfo.ee/artiklid/pdf/porandate_soojustamine.pdf" class="button">Allikas: Elar Vilt, "Põrandate soojustamisest"</a>
+          </p>
+          <hr>
+        </div>
+        <div class="col-md-4">
+          <h4>TODO</h4>
+            <ol>
+              <li>Eemaldada puujuurtelt liigne liiv võra ulatuses</li>
+<li>Hoovielekter terrassilt kasepuuni (veksellüliti, pistik, parklavalgusti) </li>
+<li>Valda teavitada septiku asukoha muutusest</li>
+<li>Servituudid 2 krunti</li>
+<li>Krundi nimemuutus</li>
+<li>Lisapildid traktoripäevast Epult</li>
+<li>Remo: majaaluse sissepääsu müüritise viimistlus</li>
+
+            </ol>
+           <!-- <a href="assets/downloads/arhitektuurne.pdf">LAE ALLA ARHITEKTUURNE PROJEKT<img src="assets/images/download.png" alt=""/></a> -->
+           <br>
+           
+           
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </section>
+
+    <section class="hide">
+      <div class="container" id="basement-pics">
+        <div class="portfilio">
+  <div class="posting text-center">    
+      <h3>KULG </h3>
+          <span></span>
+              <!--           <p>l</p> -->    
+    </div>  
+</div>
+<div id="placeholder-basement"></div>
+  <script type="text/x-handlebars-template" id="basement-template">
+    
+  <div class="port">
+    <ul class="links">
+    {{#slice images offset="0" limit="12"}}
+      <li>
+        <div class="view view-fourth">
+            <img data-original="assets/images/basement-290/{{id}}.jpg" class="lazy" alt="{{caption}}" >
+          <a href="assets/images/basement-1080/{{id}}.jpg" data-toggle="lightbox" data-gallery class="lazy"> 
+            <div class="mask"> 
+              <div class="border">
+                <h2>{{caption}}</h2>
+                <span></span>
+                <p class="a">{{description}}</p>
+              </div>
+            </div>
+          </a> 
+        </div> 
+    </li>
+  {{/slice}}
+  </ul>
+  </div>
+
+  <div class="port collapse" id="basement-next">
+    <ul class="links">
+    {{#slice images offset="12" limit="50"}}
+      <li>
+        <div class="view view-fourth">
+            <img data-original="assets/images/basement-290/{{id}}.jpg" class="lazy" alt="{{caption}}"  />
+          <a href="assets/images/basement-1080/{{id}}.jpg" data-toggle="lightbox" data-description="{{description}}" data-gallery class="lazy"> 
+            <div class="mask"> 
+              <div class="border">
+                <h2>{{caption}}</h2>
+                <span></span>
+                <p class="a">{{description}}</p>
+              </div>
+            </div>
+          </a> 
+        </div> 
+    </li>
+  {{/slice}}
+  </ul>
+  </div>
+
+<p class="text-center">
+  <br>
+  <a href="#basement-next" class="button" data-toggle="collapse"  data-open-text="Näita vähem pilte">Näita rohkem pilte</a><span class="badge">{{ images.length }}</span>
+  <br><br>
+</p>
+  </script>
+
+<!-- https://github.com/blueimp/Bootstrap-image-Gallery#setup -->
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery"  data-use-bootstrap-modal="false">
+  <!-- The container for the modal slides -->
+  <div class="slides"></div>
+  <!-- Controls for the borderless lightbox -->
+  <h3 class="title"></h3>
+  <a class="prev">‹</a>
+  <a class="next">›</a>
+  <a class="close">×</a>
+  <a class="play-pause"></a>
+  <ol class="indicator"></ol>
+
+  <div class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" aria-hidden="true">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        
+        <div class="modal-body next"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left prev"> <i class="glyphicon glyphicon-chevron-left"></i>Previous</button>
+          <button type="button" class="btn btn-primary next">Next<i class="glyphicon glyphicon-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+    </section>
+
+    <section class="lightcolor" id="basement-done">
+      <div class="posting" id="basement">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+
+        <h3>VUNDAMENT VALMINUD</h3>
+        <span> </span>
+        <p>Aeg: august - oktoober 2014</p>
+
+      </div>
+      <div class="row">
+        <div class="col-md-8 text-left">
+          <h4>Vundament</h4>
+
+          <p class="columned-2">Vundament on ehitatud 20 cm paksusest FIBO 5 kergplokist, terrass ja külalistemaja 4 rida, põhihoone 6 rida, kelder 11 rida plokke. Vundamendi all on 20 cm betoonist taldmik, selle all 16 fraktsiooniga killustikupadi. Aluspind on läbivalt liiv, umbes 1,2 m sügavusel on õhuke kiht huumust, siis looduslik kruus.
+
             <br><br>
             Kommunikatsioonidest on olemas välikäimla (isoleeritud paagiga), elekter 16 A, vesi salvkaevust (ehitatud sügisel 2013, sügavus 4 rõngast)
           </p>
           <hr>
           <h4>Kommunikatsioonid</h4>
-          <p>1. <strong>Välikäimla</strong> koosneb 1 m3 mahutist
+          <p class="columned-2">1. <strong>Välikäimla</strong> koosneb 1 m3 mahutist
             <br>
-            2. <strong>Elekter</strong> - kilp asub maja esiküljest lõunasuunas ca 40m kaugusel metsatukas. Kilbist majani on maa all kollase kõri sees 4-sooneline alumiiniumjuhe. Ehituse ajaks on üles pandud nõuetele vastavuse tõendiga elektriku koostatud ehituskilp. <br>
-            Maja ümber on paigaldatud 70cm sügavusele 1m kaugusele vundamendist Cu 16 haljas juhe maanduseks. <br>
-            <strong>Õueala kommunikatsioonid </strong>Maja tagant umbes välikäimlani on paigutatud 1 m sügavusele ühisesse kaevisesse horisontaalselt veetoru (PEM 20 mustas kõris) ja jõukaabel NYY-J 5x4 (seda ümbritseb 50/450 painduv kaablikaitsetoru), kaevise kohale on veetud hoiatuslint 30 cm sügavusele. <br>
+            2. <strong>Salvkaev</strong> 1m läbimõõdus 4 rõngast sügav, kaevatud puurmasinaga, autor Amendero OÜ. <br>
+            3. <strong>Elekter</strong> - kilp asub maja esiküljest lõunasuunas ca 40m kaugusel metsatukas. Kilbist majani on maa all kollase kõri sees 4-sooneline alumiiniumjuhe. Ehituse ajaks on üles pandud nõuetele vastavuse tõendiga elektriku koostatud ehituskilp. <br>
+            Maja ümber on paigaldatud 70cm sügavusele 1m kaugusele vundamendist Cu 16 haljas juhe maanduseks. <br><br>
+            <strong>Õueala kommunikatsioonid </strong><br>
+            Maja tagant umbes välikäimlani on paigutatud 1 m sügavusele ühisesse kaevisesse horisontaalselt veetoru (PEM 20 mustas kõris) ja jõukaabel NYY-J 5x4 (seda ümbritseb 50/450 painduv kaablikaitsetoru), kaevise kohale on veetud hoiatuslint 30 cm sügavusele. <br>
 
           </p>
         </div>
         <div class="col-md-4">
+          <h4>&nbsp;</h4>
           <dl class="dl-horizontal">
             <dt>Taldmik</dt>
             <dd>Betoon</dd>
@@ -142,39 +291,152 @@ Põhjamaades esinevate normide kohaselt peaks põran- da alla jääma vähe
             <dd>FIBO 5 20, biarmatuur</dd>
             <dt>Keldri niikustõke</dt>
             <dd>Bornit Fugendicht 1</dd>
+            <dt>Keldri ja ahjuvundamendi soojustus</dt>
+            <dd>Penoplast 100</dd>
             <dt>Krohv</dt>
             <dd>Uninaks Siler must</dd>
             <dt>Müürisegu</dt>
             <dd>Vetonit ja Uninaks</dd>
+            <dt>Tuulutusavad</dt>
+            <dd>d=125 kate valualumiinium</dd>
           </dl>
-           <a href="assets/downloads/arhitektuurne.pdf">LAE ALLA ARHITEKTUURNE PROJEKT<img src="assets/images/download.png" alt=""/></a>
-           <br>
-           <div class="well"><strong>Hoovielekter</strong> Järgmises etapis on kavas vedada elekter terrassilt hoovi keskel oleva kasepuu juurede, sinna läheb üldpistik ja hoovivalgustus (veksellüliti puu juurest ja terrassilt).</div>
-           <div class="well"><strong>Reovesi</strong> Maja taha metsa serva tuleb septik (kaugus kaevust ületab 30 m), imbväljak tuleb teisele poole metsatukka, läbi metsatuka tuleb kaevata 20m kraav torude jaoks. <strong> NB! </strong>Vallale tuleb teada anda septiku asukoha muutusest - projektis on septik maja ees.</div>
+           Varsti tulekul: <br><br>
+            <a href="#" class="button">VUNDAMENDI TEOSTUSJOONIS<img src="assets/images/download.png" alt=""/></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    </section>
+
+    <section id="killer ">
+      <div class="container hide">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="portfilio">
+  <div class="posting text-center">    
+      <h3>(DRAMAATILINE VAHEPALA) </h3>
+          <span></span>
+          <p>Saatemuusika: Edvard Grieg - Piano Concerto in A minor Op. 16</p>    
+    </div>  
+</div>
+<div id="placeholder-killer"></div>
+  <script type="text/x-handlebars-template" id="killer-template">
+    
+    
+  
+  <div class="port">
+    <ul class="links">
+    {{#images}} 
+      <li>
+        <div class="view view-fourth">
+            <img data-original="assets/images/basement/{{id}}.jpg" alt="" class="lazy"/>
+          <a href="assets/images/basement/{{id}}.jpg" data-toggle="lightbox" class="lazy" data-gallery> 
+            <div class="mask"> 
+              <div class="border">
+                <h2>{{caption}}</h2>
+                <span></span>
+                <p class="a">{{description}}</p>
+              </div>
+            </div>
+          </a> 
+        </div> 
+    </li>
+    {{/images}}
+    </ul>
+    </div>
+    </script>
+
+<!-- https://github.com/blueimp/Bootstrap-image-Gallery#setup -->
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery"  data-use-bootstrap-modal="false">
+  <!-- The container for the modal slides -->
+  <div class="slides"></div>
+  <!-- Controls for the borderless lightbox -->
+  <h3 class="title"></h3>
+  <a class="prev">‹</a>
+  <a class="next">›</a>
+  <a class="close">×</a>
+  <a class="play-pause"></a>
+  <ol class="indicator"></ol>
+
+  <div class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" aria-hidden="true">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        
+        <div class="modal-body next"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left prev"> <i class="glyphicon glyphicon-chevron-left"></i>Previous</button>
+          <button type="button" class="btn btn-primary next">Next<i class="glyphicon glyphicon-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lightcolor" id="surrounding-done">
+      <div class="posting" id="basement">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center"> 
+        
+        <h3>ÜMBRUS VALMINUD</h3>
+        <span> </span>
+        <p>Aeg: august - oktoober 2014</p>
+
+      </div>  
+      <div class="row">
+        <div class="col-md-8 text-left">
+          <h4>Teed</h4>
+          
+          <p class="columned-2">Läbi metsa lõigatud pinnaseteed sai korrastatud: kännud teealast välja juuritud. Kandvus: väga hea. Peamine ligipääsutee mere poolt üle Hundi ja suvilate maade viib üle liivaluite, seda tegi traktor madalamaks ja täitis ligi koorma jämeda killustikuga pluss loodusliku kruusaga. Roomu oja ületav betoonsild sai Remo poolt laiendatud ja läbis edukalt koormustesti koorma kruusa ja hulga betooniautode näol (Urmo suvila ehitus).   
+            <br>
+            Lisaligipääs on üle Roomu-Tobiase kinnistu heinamaatee. Seda on samuti kruusaga täidetud, Roomu oja ületav truup on autorite Maidu ja Meelise sõnul suurtest raudkividest täidisega ja pidas betooniautole kenasti vastu. 
+          </p>
+
+        </div>
+        <div class="col-md-4">
+          Varsti tulekul: <br> <br>
+          <a href="#" class="button">KOMMUNIKATSIOONIDE TEOSTUSJOONIS<img src="assets/images/download.png" alt=""/></a>
+          <br>
+          <a href="#" class="button">ÕUEALA PLAAN<img src="assets/images/download.png" alt=""/></a>
         </div>
       </div>
       
     </div>
   </div>
 </div>
-      </section>
+    </section>
 
-    <div class="page">
 
-      <div class="footer-top">
+      <section class="dark" id="basement-contact">
+        <div class="footer-top">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
-        <h4>Rebasemäe</h4>
-        <address>Tormitoa <br>
-          Rannaküla küla <br>
-          Varbla vald <br>
-          Pärnumaa <br>
-        </address> 
-        <span>
-          Ehitisregistri kood: 120705604 <br>
-          Ehitusluba nr: EL-03-14
-        </span>
+        <div class="foot">
+          <h4>Rebasemäe</h4>
+          <address>Tormitoa <br>
+            Rannaküla küla <br>
+            Varbla vald <br>
+            Pärnumaa <br>
+          </address> 
+        </div>
+        <div class="foot">
+          <a href="https://docs.google.com/spreadsheets/d/1TbHuLh33uuIE9oGM7hCirAH9f_Osbm8X6Ub9yw97uHc/edit?pli=1#gid=375699780">Eelarve vundament ja teed</a> (privaatne link)
+        </div>
       </div>  
       <div class="col-md-3">
         <h4>Kontaktid:</h4>
@@ -197,80 +459,154 @@ Põhjamaades esinevate normide kohaselt peaks põran- da alla jääma vähe
 
           </div>  
           <div class="col-md-3">
-            <h4>Projekteerija</h4>
+            <h4>Tehnika</h4>
             <div class="foot">
-              <span>Arhitektuurne projekt</span>
-              <address>Tomomi Hayashi<br>
-                tel 56 451207 <br>
-                <a href="http://hga.ee/" target="_blank">HG Arhitektuur</a>
+              <span>Veneka töödejuht</span>
+              <address><span>Esko</span><br>
+                tel 55 605455 <br>
               </address> 
             </div>
             <div class="foot">
-              <span>Konstruktiivne põhiprojekt</span>
-              <address>Mihkel Sagar<br>
-                tel 56 902104 <br>
-                <a href="http://mainhouse.ee/" target="_blank">MainHouse OÜ</a>
+              <address><span>Aivar Vene</span><br>
+                tel 51 29977 <br>
               </address> 
             </div> 
           </div>
           <div class="col-md-3">
-            <h4>Tehnilised põhinäitajad</h4>
+            <h4>Keskmised hinnad</h4>
             <div class="foot">
-              <p>
-                1. Suvila <br>
-                2. Aadress: Pärnumaa, Varbla vald, Rannaküla küla, Tormitoa <br>
-                3. Krundi pind: 10 380 m2 <br>
-                4. Katastritunnus 86301:004:0352, 
-                elamumaa 100% <br>
-                5. Hoone omanik: Mare Hunt <br>
-                6. Hoone kasusotstarve: 11103 – suvila <br>
-                7. Projekteerija: OÜ HG Arhitektuur,
-                registri nr EP10483695-0001,
-                äriregistri nr 10483695
-                8. Hoone ei ole monteeritav <br>
-              </p>
+              Betoon m3 120 <br>
+              Traktoritund 32 <br>
+              Laaduritund 50 <br>
             </div> 
           </div>
         </div>
       </div>
     </div>
-      
-      <div class="port">
-        <div id="map"></div>
-      </div>
-      
-      <div class="footer">
+      </section>
+
+    <div class="port">
+      <div id="map"></div>
+    </div>
+
+    <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-md-12"> 
         <div class="copy-right">
-          <small>&#169 Copyright 2014 All Rights Reserved  Template <a href="http://w3layouts.com/">  w3layouts.com</a></small> 
+          <small>Alustatud novembris 2014 ja jätkub. </small> 
         </div>  
       </div>
     </div>
   </div>
 </div>
-    </div>
 
-    <script type="text/javascript" src="assets/js/move-top.js"></script>
-<script type="text/javascript" src="assets/js/easing.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-  $(".scroll").click(function(event){   
-    event.preventDefault();
-    $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-  });
-});
-</script>
-<script src="assets/js/handlebars-v2.0.0.js"></script>
-<script src="assets/data/inspiration.json"></script>
-<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
+<script src='assets/js/jquery.min.js'></script>
+<script src='assets/js/handlebars-v2.0.0.js'></script>
+<script src='assets/js/bootstrap.js'></script>
+<script src='assets/js/menu.js'></script>
+<script src='assets/js/move-top.js'></script>
+<script src='assets/js/easing.js'></script>
+<script src='assets/js/googlemapscript.js'></script>
+<script src='assets/js/jquery.blueimp-gallery.min.js'></script>
+<script src='assets/js/bootstrap-image-gallery.js'></script>
+<script src='assets/js/jquery.scrollstop.js'></script>
+<script src='assets/js/jquery.lazyload.js'></script>
+<script src='assets/js/jquery.colorcontrast.js'></script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    // $().UItoTop({ easingType: 'easeOutQuart' });
+
+  // easing on scrolltop
+  // --------
+    $(".scroll").click(function(event){
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+    });
+
+  // lazyload pics
+  // --------
+    $(".lazy").lazyload({
+      threshold : 200,
+      effect : "fadeIn"
+    });
+
+      // change pics buttontext
+  // -----------------
+  $("a.button").button();
+  $("a.button").click(function(){
+    $(this).button('toggle');
+    if ($(this).text()==="Näita rohkem pilte"){
+    $(this).button('open');
+    }
+    else {
+      $(this).button('reset');
+    }
+  });
+
+});
+
+        // subnav
+    // -----------------
+  $('.collapse').on('shown.bs.collapse', function (e) {
+    $('.collapse').not(this).removeClass('in');
+  });
+
+  $('[data-toggle=collapse]').click(function (e) {
+    $('[data-toggle=collapse]').parent('li').removeClass('active');
+    $(this).parent('li').toggleClass('active');
+  });
+
+  $('body').colorcontrast();
+
+  // color change
+  var darkOrLight = function(red, green, blue) {
+  var brightness;
+  brightness = (red * 299) + (green * 587) + (blue * 114);
+  brightness = brightness / 255000;
+
+  // values range from 0 to 1
+  // anything greater than 0.5 should be bright enough for dark text
+  if (brightness >= 0.5) {
+    return "dark-text";
+  } else {
+    return "light-text";
+  }
+}
+
+      // adding desc to lightbox - not functioning
+  // -----------------
+// blueimp.Gallery(
+//     document.getElementById('links'),
+//     {
+//         container: '#blueimp-gallery',
+//         onslide: function (index, slide) {
+//             var text = this.list[index].getAttribute('data-description'),
+//                 node = this.container.find('.description');
+//             node.empty();
+//             if (text) {
+//                 node[0].appendChild(document.createTextNode(text));
+//             }
+//         }
+//     }
+// );
+</script>
+
+<!-- DATA -->
+<!-- ///////////// -->
+<script src="assets/data/inspiration.json"></script>
+<script src="assets/data/basement.json"></script>
+<script src="assets/data/killer.json"></script>
+<script src="assets/data/box.json"></script>
+
+
 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
-<script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
-<script src="assets/js/grayscale.js"></script>
-<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-<script src="assets/js/bootstrap-image-gallery.js"></script>
+
   </body>
-</html>
+</html>

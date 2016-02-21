@@ -1,0 +1,269 @@
+  Handlebars.registerHelper('leftTrim', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 20) return text.substring(0,20) +"...";
+    else return text;
+  });
+
+  Handlebars.registerHelper('slice', function(context, block) {
+    var ret = "",
+        offset = parseInt(block.hash.offset) || 0,
+        limit = parseInt(block.hash.limit) || 5,
+        i = (offset < context.length) ? offset : 0,
+        j = ((limit + offset) < context.length) ? (limit + offset) : context.length;
+   
+    for(i,j; i<j; i++) {
+      ret += block.fn(context[i]);
+    }
+
+    return ret;
+  });
+
+
+  var source   = $("#basement-template").html();
+  var template = Handlebars.compile(source); 
+
+
+  var data = { images: [
+    { 
+      caption: "Vundamendiauk",
+      id: "base-01",
+      description: "Lauri kaevab"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-02",
+      description: "See tüüp oli proff "
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-03",
+      description: "- ausalt"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-04",
+      description: "Ja laste vastu liiga lahke"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-05",
+      description: "Jäme killustik tee jaoks - kuld"
+    },
+        {
+      caption: "Hobused",
+      id: "base-06",
+      description: "Hobused söövad seni korralikult rohtu"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-07",
+      description: " Saalungi lauad, armatuur ja plätud."
+    },
+    {
+      caption: "Liivamägede võlud",
+      id: "base-08",
+      description: "Valmis. Sile kui siid. "
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-09",
+      description: "Need peavad jääma IGAVESEKS!"
+    },
+    {
+      caption: "Võrratud liivamäed",
+      id: "base-10",
+      description: "Võrratud liivamäed"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-11",
+      description: "Võrratud liivamäed"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-12",
+      description: "Rannapuhkus"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-13",
+      description: "Suur vend loeb Rubile"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-14",
+      description: "Kontor on valmis"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-15",
+      description: "Romantiline kodutee - esimene ja viimane pilt sellest. Otsa sai."
+    },
+    {
+      caption: "Liivamägede võlud",
+      id: "base-17",
+      description: "Valmis. Sile kui siid. "
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-18",
+      description: "Need peavad jääma IGAVESEKS!"
+    },
+    {
+      caption: "Võrratud liivamäed",
+      id: "base-19",
+      description: "Võrratud liivamäed"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-20",
+      description: "Võrratud liivamäed"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-21",
+      description: "Rannapuhkus"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-22",
+      description: "Suur vend loeb Rubile"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-23",
+      description: "Kontor on valmis"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-24",
+      description: "Romantiline kodutee - esimene ja viimane pilt sellest. Otsa sai."
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-25",
+      description: " Saalungi lauad, armatuur ja plätud."
+    },
+    {
+      caption: "Liivamägede võlud",
+      id: "base-26",
+      description: "Valmis. Sile kui siid. "
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-28",
+      description: "Need peavad jääma IGAVESEKS!"
+    },
+    {
+      caption: "Võrratud liivamäed",
+      id: "base-29",
+      description: "Võrratud liivamäed"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-30",
+      description: "Võrratud liivamäed"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-31",
+      description: "Rannapuhkus"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-32",
+      description: "Suur vend loeb Rubile"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-33",
+      description: "Kontor on valmis"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-34",
+      description: "Romantiline kodutee - esimene ja viimane pilt sellest. Otsa sai."
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-35",
+      description: " Saalungi lauad, armatuur ja plätud."
+    },
+    {
+      caption: "Liivamägede võlud",
+      id: "base-36",
+      description: "Valmis. Sile kui siid. "
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-37",
+      description: "Need peavad jääma IGAVESEKS!"
+    },
+    {
+      caption: "Võrratud liivamäed",
+      id: "base-38",
+      description: "Võrratud liivamäed"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-38",
+      description: "Võrratud liivamäed"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-39",
+      description: "Rannapuhkus"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-40",
+      description: "Suur vend loeb Rubile"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-42",
+      description: "Kontor on valmis"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-42",
+      description: "Romantiline kodutee - esimene ja viimane pilt sellest. Otsa sai."
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-43",
+      description: " Saalungi lauad, armatuur ja plätud."
+    },
+    {
+      caption: "Liivamägede võlud",
+      id: "base-44",
+      description: "Valmis. Sile kui siid. "
+    },
+    {
+      caption: "Võrratud liivamäed",
+      id: "base-46",
+      description: "Võrratud liivamäed"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-47",
+      description: "Võrratud liivamäed"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-50",
+      description: "Kontor on valmis"
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-51",
+      description: "Romantiline kodutee - esimene ja viimane pilt sellest. Otsa sai."
+    },
+    {
+      caption: "Vundamendiauk",
+      id: "base-52",
+      description: "Romantiline kodutee - esimene ja viimane pilt sellest. Otsa sai."
+    }
+    ]};
+
+  $("#placeholder-basement").html(template(data));

@@ -1,0 +1,94 @@
+<div class="portfilio">
+  <div class="posting text-center">    
+      <h3>ALLIKAD </h3>
+          <span></span>
+              <!--           <p>l</p> -->    
+    </div>  
+</div>
+<div id="placeholder-inspiration"></div>
+  <script type="text/x-handlebars-template" id="inspiration-template">
+    
+    
+  
+  <div class="port">
+    <ul class="links">
+    {{#images}} 
+      <li>
+        <div class="view view-fourth">
+            <img src="assets/images/inspiration/{{id}}.jpg" alt=""/>
+          <a href="assets/images/inspiration/{{id}}.jpg" data-toggle="lightbox" data-gallery> 
+            <div class="mask"> 
+              <div class="border">
+                <h2>{{caption}}</h2>
+                <span></span>
+                <p class="a">{{description}}</p>
+              </div>
+            </div>
+          </a> 
+        </div> 
+    </li>
+    {{/images}} 
+      <li>
+        <div class="view view-fourth">
+            <img src="http://cdn.freshome.com/wp-content/uploads/2015/02/exterior-modern-residence1.jpg" alt=""/>
+          <a href="http://cdn.freshome.com/wp-content/uploads/2015/02/exterior-modern-residence1.jpg" data-toggle="lightbox" data-gallery> 
+            <div class="mask"> 
+              <div class="border">
+                <h2>Lükandsein</h2>
+                <span></span>
+                <p class="a">Kogu projekt <a href="http://freshome.com/2015/02/04/practical-one-level-residence-with-a-spacious-cross-section-the-skylight-house/">Freshomes</a></p>
+              </div>
+            </div>
+          </a> 
+        </div> 
+    </li>
+    <li>
+        <div class="view view-fourth">
+            <img src="https://s-media-cache-ak0.pinimg.com/736x/e6/53/ac/e653ac51da2156442e68d13af24c4860.jpg" alt=""/>
+          <a href="https://s-media-cache-ak0.pinimg.com/736x/e6/53/ac/e653ac51da2156442e68d13af24c4860.jpg" data-toggle="lightbox" data-gallery> 
+            <div class="mask"> 
+              <div class="border">
+                <h2>Varbkatus</h2>
+                <span></span>
+                <p class="a"></p>
+              </div>
+            </div>
+          </a> 
+        </div> 
+    </li>
+    </ul>
+    </div>
+    </script>
+
+<!-- <p><a href="index.html">Vaata veel<span> </span></a></p> -->
+
+
+<!-- https://github.com/blueimp/Bootstrap-image-Gallery#setup -->
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery"  data-use-bootstrap-modal="false">
+  <!-- The container for the modal slides -->
+  <div class="slides"></div>
+  <!-- Controls for the borderless lightbox -->
+  <h3 class="title"></h3>
+  <a class="prev">‹</a>
+  <a class="next">›</a>
+  <a class="close">×</a>
+  <a class="play-pause"></a>
+  <ol class="indicator"></ol>
+
+  <div class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" aria-hidden="true">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body next"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left prev"> <i class="glyphicon glyphicon-chevron-left"></i>Previous</button>
+          <button type="button" class="btn btn-primary next">Next<i class="glyphicon glyphicon-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

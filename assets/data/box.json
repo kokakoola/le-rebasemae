@@ -1,0 +1,34 @@
+  Handlebars.registerHelper('leftTrim', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 20) return text.substring(0,20) +"...";
+    else return text;
+  });
+
+  Handlebars.registerHelper('slice', function(context, block) {
+    var ret = "",
+        offset = parseInt(block.hash.offset) || 0,
+        limit = parseInt(block.hash.limit) || 5,
+        i = (offset < context.length) ? offset : 0,
+        j = ((limit + offset) < context.length) ? (limit + offset) : context.length;
+
+    for(i,j; i<j; i++) {
+      ret += block.fn(context[i]);
+    }
+
+    return ret;
+  });
+
+
+  var source   = $("#box-template").html();
+  var template = Handlebars.compile(source);
+
+
+  var data = { images: [
+    {
+      caption: "Siseviimistlus",
+      id: "katuseakna-pale",
+      description: "Katuseakna põse ja katuslae viimistlus"
+    }
+    ]};
+
+  $("#placeholder-box").html(template(data));

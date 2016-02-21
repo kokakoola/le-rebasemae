@@ -1,0 +1,95 @@
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+<!-- @javascript jquery.min handlebars-v2.0.0 bootstrap menu move-top easing googlemapscript jquery.blueimp-gallery.min bootstrap-image-gallery jquery.scrollstop jquery.lazyload jquery.colorcontrast -->
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    // $().UItoTop({ easingType: 'easeOutQuart' });
+
+  // easing on scrolltop
+  // --------
+    $(".scroll").click(function(event){
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+    });
+
+  // lazyload pics
+  // --------
+    $(".lazy").lazyload({
+      threshold : 200,
+      effect : "fadeIn"
+    });
+
+      // change pics buttontext
+  // -----------------
+  $("a.button").button();
+  $("a.button").click(function(){
+    $(this).button('toggle');
+    if ($(this).text()==="Näita rohkem pilte"){
+    $(this).button('open');
+    }
+    else {
+      $(this).button('reset');
+    }
+  });
+
+});
+
+        // subnav
+    // -----------------
+  $('.collapse').on('shown.bs.collapse', function (e) {
+    $('.collapse').not(this).removeClass('in');
+  });
+
+  $('[data-toggle=collapse]').click(function (e) {
+    $('[data-toggle=collapse]').parent('li').removeClass('active');
+    $(this).parent('li').toggleClass('active');
+  });
+
+  $('body').colorcontrast();
+
+  // color change
+  var darkOrLight = function(red, green, blue) {
+  var brightness;
+  brightness = (red * 299) + (green * 587) + (blue * 114);
+  brightness = brightness / 255000;
+
+  // values range from 0 to 1
+  // anything greater than 0.5 should be bright enough for dark text
+  if (brightness >= 0.5) {
+    return "dark-text";
+  } else {
+    return "light-text";
+  }
+}
+
+      // adding desc to lightbox - not functioning
+  // -----------------
+// blueimp.Gallery(
+//     document.getElementById('links'),
+//     {
+//         container: '#blueimp-gallery',
+//         onslide: function (index, slide) {
+//             var text = this.list[index].getAttribute('data-description'),
+//                 node = this.container.find('.description');
+//             node.empty();
+//             if (text) {
+//                 node[0].appendChild(document.createTextNode(text));
+//             }
+//         }
+//     }
+// );
+</script>
+
+<!-- DATA -->
+<!-- ///////////// -->
+<script src="assets/data/inspiration.json"></script>
+<script src="assets/data/basement.json"></script>
+<script src="assets/data/killer.json"></script>
+<script src="assets/data/box.json"></script>
+
+
+<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>

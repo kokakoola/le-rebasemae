@@ -1,0 +1,60 @@
+<div class="portfilio">
+  <div class="posting text-center">
+      <h3>NÄITED </h3>
+          <span></span>
+              <!--           <p>l</p> -->
+    </div>
+</div>
+<div id="placeholder-box"></div>
+  <script type="text/x-handlebars-template" id="box-template">
+
+  <div class="port">
+    <ul class="links">
+    {{#slice images offset="0" limit="12"}}
+      <li>
+        <div class="view view-fourth">
+            <img data-original="assets/images/box/{{id}}.jpg" class="lazy" alt="{{caption}}" >
+          <a href="assets/images/box/{{id}}.jpg" data-toggle="lightbox" data-gallery class="lazy">
+            <div class="mask"> 
+              <div class="border">
+                <h2>{{caption}}</h2>
+                <span></span>
+                <p class="a">{{description}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+    </li>
+  {{/slice}}
+  </ul>
+  </div>
+
+  <div class="port collapse" id="basement-next">
+    <ul class="links">
+    {{#slice images offset="12" limit="50"}}
+      <li>
+        <div class="view view-fourth">
+            <img data-original="assets/images/box/{{id}}.jpg" class="lazy" alt="{{caption}}"  />
+          <a href="assets/images/box/{{id}}.jpg" data-toggle="lightbox" data-description="{{description}}" data-gallery class="lazy">
+            <div class="mask">
+              <div class="border">
+                <h2>{{caption}}</h2>
+                <span></span>
+                <p class="a">{{description}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+    </li>
+  {{/slice}}
+  </ul>
+  </div>
+
+<p class="text-center">
+  <br>
+  <a href="#basement-next" class="button" data-toggle="collapse"  data-open-text="Näita vähem pilte">Näita rohkem pilte</a><span class="badge">{{ images.length }}</span>
+  <br><br>
+</p>
+  </script>
+
+<!-- @include lightbox-component -->

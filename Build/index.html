@@ -1,45 +1,17 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Foxhill House | Home :: mare</title>
-
-
+  <title>Le Rebasemae | Algus :: Mare</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
   </script>
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:300, 400,700' rel='stylesheet' type='text/css'>
-  <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-
-<link href="assets/css/bootstrap-image-gallery.css" rel="stylesheet" type="text/css" media="all" />
-<link href="assets/css/base.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="assets/js/modernizr.custom.28468.js"></script>
-<script src="assets/js/css3-mediaqueries.js"></script>
-<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.cslider.js"></script>
-
-<script type="text/javascript"  src="assets/js/menu.js"></script>
-<script src="assets/js/fwslider.js"></script>
-<!--end slider -->
-<script type="text/javascript">
-$(document).ready(function() {
-  
-  var defaults = {
-          containerID: 'toTop', // fading element id
-          containerHoverID: 'toTopHover', // fading element hover id
-          scrollSpeed: 1200,
-          easingType: 'linear' 
-        };
-        
-        
-        $().UItoTop({ easingType: 'easeOutQuart' });
-        
-      });
-</script>
+  <link rel="stylesheet" href="assets/css/blueimp-gallery.min.css" type="text/css" media="all">
+  <link href="assets/css/bootstrap-image-gallery.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="assets/css/base.css" rel="stylesheet" type="text/css" media="all" />
+  <script type="text/javascript" src="assets/js/modernizr.custom.28468.js"></script>
+  <script src="assets/js/css3-mediaqueries.js"></script>
 
 
         <!-- Hammer reload -->
@@ -49,12 +21,13 @@ $(document).ready(function() {
                 if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
                 ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
                 ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
                 ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
                       link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
                     }
                   }
@@ -67,105 +40,114 @@ $(document).ready(function() {
 
 </head>
 
-  <body id="page-top">
-    <div class="masthead">
-      <div class="header_bg">
-  <div class="header_bg">
 
-    <div class="container">
+    <body id="page-top">
+      <div style="overflow-x: hidden;">
+        <div class="masthead">
+          <div class="header_bg">
+             <!-- http://www.bootply.com/Axbt2Y0LIQ -->
 
-      <div class="header">
+<div class="container">
 
-        <header id="topnav">
-          <nav>
-            <ul>
-              <li class="active"><a  href="#home">Algus</a></li>
+  <div class="header">
+
+    <header id="topnav">
+      <nav class="navbar navbar-inverse navbar-default" role="navigation" id="topmenu" class="mainmenu">
+        
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a  class="dropdown-toggle" href="#!" id="algus" data-toggle="dropdown" aria-expanded="false" aria-controls="algus">Algus</a>
+            <ul class="nav navbar-nav dropdown-menu" aria-labelledby="algus">
               <li><a href="#access" class="scroll">Asukoht</a></li>
-              <li><a href="#plans" class="scroll">Plaanid</a></li>
-              <li><a href="#about" class="scroll">Seletus</a></li>
-              <li><a href="#inspiration" class="scroll">Allikad</a></li>
-              <li><a href="#roadmap" class="scroll">Kulg</a></li>
-              <li class="last"><a href="#contact" class="scroll">Kontakt</a></li>
-
+              <li><a href="#about" class="scroll">Projektid</a></li>
+              <li><a href="#inspiration" class="scroll">Näidised</a></li>
+              <li><a href="#contact" class="scroll">Kontakt</a></li>
             </ul>
-          </nav>
-          <!-- <h1><a class='current' href="index.html">EHITUSPÄEVIK</a></h1> -->
-          <a href="#" id="navbtn">Nav Menu</a>
+          </li>
+          <li>
+            <a  href="basement.html">Vundament</a>
+          </li>
+          <li>
+            <a  href="box.html">Karp</a>
+          </li>
+          <li>
+            <a  href="communications.html" class="disabled">Kommunikatsioonid</a>
+          </li>
+          <li>
+            <a  href="indoor.html" class="disabled">Sisetööd</a>
+          </li>
+          <li>
+            <a  href="finishing.html" class="disabled">Viimistlus</a>
+          </li>
 
-        </header>
 
-      </div>
+        </ul>
+      </nav>
 
-    </div>
+    </header>
+
   </div>
 
 </div>
-    
-      <div class="images-slider">
-  <div id="fwslider">
-    <div class="slider_container">
-      <div class="slide"> 
-        <img src="assets/images/makett/makett_01.jpg" alt=""/>
-        <div class="slide_content">
-          <div class="slide_content_wrap">
-            <h4 class="title">REBASEMÄE , RANNAKÜLA, VARBLA VALD, PÄRNUMAA <br></h4>
-            <div class="slide-btns description">
-            </div>
+
+
+
           </div>
-        </div>
-      </div>
 
-      <div class="slide">
-        <img src="assets/images/makett/makett_02.jpg" alt=""/>
-      </div>
+          <div class="row slider slider-main">
+            <div class="col-sm-10 col-sm-offset-1">
+              <div id="carousel-main" class="carousel slide" data-ride="carousel" data-interval="false">
+  <!-- Indicators -->
+<!--   <ol class="carousel-indicators">
+    <li data-target="#carousel-main" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-main" data-slide-to="1"></li>
+    <li data-target="#carousel-main" data-slide-to="2"></li>
+    <li data-target="#carousel-main" data-slide-to="3"></li>
+    <li data-target="#carousel-main" data-slide-to="4"></li>
+  </ol> -->
 
-      <div class="slide">
-        <img src="assets/images/makett/makett_03.jpg" alt=""/>
-        <div class="slide_content">
-          <div class="slide_content_wrap" style="float:right;">
-            <p class="description">REBASEMÄE, RANNAKÜLA, VARBLA VALD, PÄRNUMAA</p>
-            <h4 class="title"><span>ARHITEKTUURNE</span> PROJEKT <br></h4>
-<!--             <p class="description"><a href="assets/downloads/arhitektuurne.pdf">LAE ALLA <img src="assets/images/download.png" alt=""/></a> -->
-            </p>
-            <div class="slide-btns description">
-            </div>
-          </div>
-        </div>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="assets/images/makett/makett_01.jpg" alt=""/> 
+      <div class="carousel-caption">
+        <h4 class="text-left">EHITUSPÄEVIK</h4>
       </div>
-
-      <div class="slide">
-        <img src="assets/images/makett/makett_04.jpg" alt=""/>
-        <div class="slide_content">
-          <div class="slide_content_wrap">
-            <p class="description">REBASEMÄE, RANNAKÜLA, VARBLA VALD, PÄRNUMAA</p>
-            <h4 class="title"><span>KONSTRUKTIIVNE</span> PROJEKT <br></h4>
-<!--             <p class="description"><a href="assets/downloads/konstruktiivne.pdf">LAE ALLA<img src="assets/images/download.png" alt=""/></a></p> -->
-            <div class="slide-btns description">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="assets/images/makett/makett_05.jpg" alt=""/>
-        <div class="slide_content">
-          <div class="slide_content_wrap">
-            <h4 class="title">EHITUSPÄEVIK</h4>
-          </div>
-        </div>
-      </div>
-
     </div>
-    <div class="timers"> </div>
+    <div class="item">
+      <img src="assets/images/makett/makett_02.jpg" alt=""/>
+    </div>
+
+    <div class="item">
+      <img src="assets/images/makett/makett_03.jpg" alt=""/>
+    </div>
+    <div class="item">
+      <img src="assets/images/makett/makett_04.jpg" alt=""/>
+    </div>
+    <div class="item">
+      <img src="assets/images/makett/makett_05.jpg" alt=""/>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-main" role="button" data-slide="prev">
     <div class="slidePrev"><span> </span></div>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-main" role="button" data-slide="next">
     <div class="slideNext"><span> </span></div>
-  </div>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-    </div>
 
-    <div class="page">
-      <section id="access">
-      <div class="posting">
+
+              </div>
+          </div>
+        </div>
+
+        <div class="page">
+          <section id="access">
+          <div class="posting">
 <div class="container">
   <div class="row">
     <div class="text-center"> 
@@ -177,7 +159,7 @@ $(document).ready(function() {
       </div>  
       <div class="row">
         <div class="col-md-8 text-left">
-          <h4>Asendiplaaniline osa</h4>
+          <h4>Asendiplaaniline osa <i class="mdi-hardware-keyboard-arrow-up"></i></h4>
           <p class="columned-2">
             Pärnumaal, Varbla vallas, Rannaküla külas, 10 380 m2 Tormitoa kinnistul. Tormitoa elamumaakrunt on piklik, loode-kagu suunaline ja piirneb kagus Tormi maatulundusmaa kinnistuga ning edelas 4 elamumaa kinnistuga. Juurdepääs on olemasoleva pinnastee kaudu. Ehituskrunt on künklik, maapinna absoluutsed kõrgused on vahemikus 2.57 kuni 7.45 m. Krunt on osaliselt kaetud segametsaga, lääne-lõuna küljes samblase männikuga. Suvila rajatakse looduslikule lagendikule. Ehituse alale jäävad üksikud puud ja võsa likvideeritakse, üldiselt säilitatakse looduslik haljastus muutmata kujul. Suvila on paigutatud krundi kaguserva. Lähim naaberhoone asub ligikaudu 115 m kaugusel (Rannakadaka kinnistul). Kinnistu ei jää ranna ehituskeeluvööndisse (mereni on 200 m).
           </p>
@@ -190,88 +172,36 @@ $(document).ready(function() {
           </p>
         </div>
         <div class="col-md-4" >
-          <img src=" assets/images/hga_suvila_01.jpg " alt="" style="min-width: 500px;">
+          <img src=" assets/images/other/hga_suvila_01.jpg " alt="" style="min-width: 500px;">
         </div>
       </div>
       
     </div>
   </div>
 </div>
-      </section>
+          </section>
 
-      <section id="plans">
-        <div class="row slider">
-          <div class="col-sm-10 col-sm-offset-1">
-            <div id="carousel-plans" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
+          <!-- <div class="port">
+            <div id="map"></div>
+          </div> -->
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="assets/images/plans/plan-01.png" alt=""/>
-    </div>
-    <div class="item">
-      <img src="assets/images/plans/plan-02.png" alt=""/>
-    </div>
-
-    <div class="item">
-      <img src="assets/images/plans/plan-09.png" alt=""/>
-    </div>
-    <div class="item">
-      <img src="assets/images/plans/plan-08.png" alt=""/>
-    </div>
-    <div class="item">
-      <img src="assets/images/plans/plan-07.png" alt=""/>
-    </div>
-    <div class="item">
-      <img src="assets/images/plans/plan-06.png" alt=""/>
-    </div>
-    <div class="item">
-      <img src="assets/images/plans/plan-04.png" alt=""/>
-    </div>
-    <div class="item">
-      <img src="assets/images/plans/plan-03.png" alt=""/>
-    </div>
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-plans" role="button" data-slide="prev">
-    <div class="slidePrev"><span> </span></div>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-plans" role="button" data-slide="next">
-    <div class="slideNext"><span> </span></div>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-
-          </div>
-        </div>
-      </section>
-
-      <section class="lightcolor" id="about">
-      <div class="posting">
+          <section class="lightcolor" id="about">
+            <div class="posting">
 <div class="container">
   <div class="row">
-    <div class="text-center"> 
-      
+    <div class="text-center">
+
         <h3>SELETUS</h3>
         <span> </span>
         <p>Tsiteeritud eelprojekti.</p>
 
-      </div>  
+      </div>
       <div class="row">
         <div class="col-md-8 text-left">
           <h4>Arhitektuurne osa</h4>
-          
+
           <p class="columned-2">
-            Suvilas paiknevad esimesel korrusel elutuba-köök, kaks magamistuba ja pesuruum ning eraldi sissepääsuga külasliste tuba ja lähtine kuur. Teisel korrusel asuvad kaks siserõdu. Hoone edela ja kirde külge ümbritseb terrass. Suvila peasissepääs asub hoone edelafassaadis. Majal on 39° kaldega viilkatus. Hoone fassaadis on kasutatud peitsitud musta vertikaalset peensaetud laudist. Katus kaetakse SBS bituumenkattega. Projekteeritud hoone kuulub TP3 tulepüsivusklassi. 
+            Suvilas paiknevad esimesel korrusel elutuba-köök, kaks magamistuba ja pesuruum ning eraldi sissepääsuga külasliste tuba ja lähtine kuur. Teisel korrusel asuvad kaks siserõdu. Hoone edela ja kirde külge ümbritseb terrass. Suvila peasissepääs asub hoone edelafassaadis. Majal on 39° kaldega viilkatus. Hoone fassaadis on kasutatud peitsitud musta vertikaalset peensaetud laudist. Katus kaetakse SBS bituumenkattega. Projekteeritud hoone kuulub TP3 tulepüsivusklassi.
           </p>
           <hr>
           <h4>Siseviimistlus</h4>
@@ -286,7 +216,7 @@ $(document).ready(function() {
         <hr>
         <h4>Välisviimistlus</h4>
         <p class="columned-2">
-          Vundament: 
+          Vundament:
           Fibo 5 kergplokkidest, krohvitud (Uninaks Siler must) <br>
           Välistrepid ja terrass: Sügavimmutatud puit, toon pruun <br>
           Seinad: Peensaelaud UYV profiiliga 21x120, vertikaalsed. Peitsitud must. <br>
@@ -336,82 +266,54 @@ $(document).ready(function() {
             <dt>Välissein</dt>
             <dd>puit</dd>
             <dt>Katusekate</dt>
-            <dd>SBS bituumen</dd>
+            <dd>SBS bituumen või Klassik plekk</dd>
             <dt>Välisviimistlus</dt>
             <dd>laudis</dd>
           </dl>
 
-           <a href="assets/downloads/arhitektuurne.pdf">LAE ALLA ARHITEKTUURNE PROJEKT<img src="assets/images/download.png" alt=""/></a>
+           <a class="button" href="assets/downloads/arhitektuurne.pdf">VAATA ARHITEKTUURSET PROJEKTI</a>
            <br>
-           <a href="assets/downloads/konstruktiivne.pdf">LAE ALLA KONSTRUKTIVNE PROJEKT<img src="assets/images/download.png" alt=""/></a>
+           <a class="button" href="assets/downloads/konstruktiivne.pdf">VAATA KONSTRUKTIVSET PROJEKTI (ebatäpne)</a>
+           <dl class="dl-horizontal">
+            <dt>Terrassid kokku umbes</dt>
+            <dd>120 m2</dd>
+            <dt>Põrandad TP1 kokku</dt>
+            <dd>113.5 m2</dd>
+            <dt>Välisseina VS1 kokku</dt>
+            <dd>205 m2</dd>
+            <dt>Katuslagi VK1 kokku</dt>
+            <dd>167,5 m2</dd>
+            <dt>Katus soojustuseta</dt>
+            <dd>32.1 m2</dd>
+            <dt>Kokku katusekate</dt>
+            <dd>200 m2</dd>
+            <dt>Terrassikatus läbipaistev</dt>
+            <dd>48 m2</dd>
+            <dt>Katuse nähtav sisekülg</dt>
+            <dd>78,6 m2</dd>
+          </dl>
         </div>
       </div>
-      
+
     </div>
   </div>
 </div>
-      </section>
-      
-      <section id="roadmap">
-        <div class="skills text-center">
-  <div class="container">
-    <h4>KULG</h4>
-    <div class="client">    
-      <div class="pie-wrapper progress-95 style-2">
-        <span class="label">99<span class="smaller">%</span></span>
-        <div class="pie">
-          <div class="left-side half-circle"></div>
-          <div class="right-side half-circle"></div>
-        </div>
-        <div class="shadow"></div>
-        <a href="basement.html"><h3>VUNDAMENT</h3></a>
-      </div>
-      <div class="pie-wrapper progress-05 style-2">
-        <span class="label">0<span class="smaller">%</span></span>
-        <div class="pie">
-          <div class="left-side half-circle"></div>
-          <div class="right-side half-circle"></div>
-        </div>
-        <div class="shadow"></div>
-        <h3>KARP</h3>
-      </div>
-      <div class="pie-wrapper progress-05 style-2">
-        <span class="label">10<span class="smaller">%</span></span>
-        <div class="pie">
-          <div class="left-side half-circle"></div>
-          <div class="right-side half-circle"></div>
-        </div>
-        <div class="shadow"></div>
-        <h3>KOMMUNIKATSIOONID</h3>
-      </div>
-      <div class="pie-wrapper progress-05 style-2">
-        <span class="label">0<span class="smaller">%</span></span>
-        <div class="pie">
-          <div class="left-side half-circle"></div>
-          <div class="right-side half-circle"></div>
-        </div>
-        <div class="shadow"></div>
-        <h3>SISETÖÖD</h3>
-      </div>
-      <div class="pie-wrapper progress-05 style-2">
-        <span class="label">0<span class="smaller">%</span></span>
-        <div class="pie">
-          <div class="left-side half-circle"></div>
-          <div class="right-side half-circle"></div>
-        </div>
-        <div class="shadow"></div>
-        <h3>VIIMISTLUS</h3>
-      </div>  
-    </div>
-  </div>
-</div>
-      </section>
-      
-      <section id="inspiration">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="portfilio">
+
+          </section>
+
+          <!-- <section id="plans">
+            <div class="row slider">
+              <div class="col-sm-10 col-sm-offset-1">
+                @include bs-carousel-plans
+              </div>
+            </div>
+          </section> -->
+
+          <section id="inspiration">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="portfilio">
   <div class="posting text-center">    
       <h3>ALLIKAD </h3>
           <span></span>
@@ -440,7 +342,35 @@ $(document).ready(function() {
           </a> 
         </div> 
     </li>
-    {{/images}}
+    {{/images}} 
+      <li>
+        <div class="view view-fourth">
+            <img src="http://cdn.freshome.com/wp-content/uploads/2015/02/exterior-modern-residence1.jpg" alt=""/>
+          <a href="http://cdn.freshome.com/wp-content/uploads/2015/02/exterior-modern-residence1.jpg" data-toggle="lightbox" data-gallery> 
+            <div class="mask"> 
+              <div class="border">
+                <h2>Lükandsein</h2>
+                <span></span>
+                <p class="a">Kogu projekt <a href="http://freshome.com/2015/02/04/practical-one-level-residence-with-a-spacious-cross-section-the-skylight-house/">Freshomes</a></p>
+              </div>
+            </div>
+          </a> 
+        </div> 
+    </li>
+    <li>
+        <div class="view view-fourth">
+            <img src="https://s-media-cache-ak0.pinimg.com/736x/e6/53/ac/e653ac51da2156442e68d13af24c4860.jpg" alt=""/>
+          <a href="https://s-media-cache-ak0.pinimg.com/736x/e6/53/ac/e653ac51da2156442e68d13af24c4860.jpg" data-toggle="lightbox" data-gallery> 
+            <div class="mask"> 
+              <div class="border">
+                <h2>Varbkatus</h2>
+                <span></span>
+                <p class="a"></p>
+              </div>
+            </div>
+          </a> 
+        </div> 
+    </li>
     </ul>
     </div>
     </script>
@@ -477,15 +407,13 @@ $(document).ready(function() {
     </div>
   </div>
 </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      
+          </section>
 
-
-      <section id="contact">
-        <div class="footer-top">
+          <section class="dark" id="contact">
+            <div class="footer-top">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
@@ -497,7 +425,8 @@ $(document).ready(function() {
         </address> 
         <span>
           Ehitisregistri kood: 120705604 <br>
-          Ehitusluba nr: EL-03-14
+          Ehitusluba nr: EL-03-14, välja antud 13.06.2014 <br>
+          <a href="https://docs.google.com/spreadsheets/d/1ijcCvPAJYGv33Ou8WzIHGtNB7SgA-Molpik-7jyJPeg/edit#gid=0">Eelarve üldine</a> (privaatne link)
         </span>
       </div>  
       <div class="col-md-3">
@@ -550,7 +479,7 @@ $(document).ready(function() {
                 6. Hoone kasusotstarve: 11103 – suvila <br>
                 7. Projekteerija: OÜ HG Arhitektuur,
                 registri nr EP10483695-0001,
-                äriregistri nr 10483695
+                äriregistri nr 10483695 <br>
                 8. Hoone ei ole monteeritav <br>
               </p>
             </div> 
@@ -558,44 +487,133 @@ $(document).ready(function() {
         </div>
       </div>
     </div>
-      </section>
-      
-      <div class="port">
-        <div id="map"></div>
-      </div>
-      
-      <div class="footer">
+          </section>
+
+          <!-- <section id="roadmap">
+           @include circles
+          </section> -->
+
+          <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-md-12"> 
         <div class="copy-right">
-          <small>&#169 Copyright 2014 All Rights Reserved  Template <a href="http://w3layouts.com/">  w3layouts.com</a></small> 
+          <small>Alustatud novembris 2014 ja jätkub. </small> 
         </div>  
       </div>
     </div>
   </div>
 </div>
-    </div>
+        </div>
 
-    <script type="text/javascript" src="assets/js/move-top.js"></script>
-<script type="text/javascript" src="assets/js/easing.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-  $(".scroll").click(function(event){   
-    event.preventDefault();
-    $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-  });
-});
-</script>
-<script src="assets/js/handlebars-v2.0.0.js"></script>
-<script src="assets/data/inspiration.json"></script>
-<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+        <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
+<script src='assets/js/jquery.min.js'></script>
+<script src='assets/js/handlebars-v2.0.0.js'></script>
+<script src='assets/js/bootstrap.js'></script>
+<script src='assets/js/menu.js'></script>
+<script src='assets/js/move-top.js'></script>
+<script src='assets/js/easing.js'></script>
+<script src='assets/js/googlemapscript.js'></script>
+<script src='assets/js/jquery.blueimp-gallery.min.js'></script>
+<script src='assets/js/bootstrap-image-gallery.js'></script>
+<script src='assets/js/jquery.scrollstop.js'></script>
+<script src='assets/js/jquery.lazyload.js'></script>
+<script src='assets/js/jquery.colorcontrast.js'></script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    // $().UItoTop({ easingType: 'easeOutQuart' });
+
+  // easing on scrolltop
+  // --------
+    $(".scroll").click(function(event){
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+    });
+
+  // lazyload pics
+  // --------
+    $(".lazy").lazyload({
+      threshold : 200,
+      effect : "fadeIn"
+    });
+
+      // change pics buttontext
+  // -----------------
+  $("a.button").button();
+  $("a.button").click(function(){
+    $(this).button('toggle');
+    if ($(this).text()==="Näita rohkem pilte"){
+    $(this).button('open');
+    }
+    else {
+      $(this).button('reset');
+    }
+  });
+
+});
+
+        // subnav
+    // -----------------
+  $('.collapse').on('shown.bs.collapse', function (e) {
+    $('.collapse').not(this).removeClass('in');
+  });
+
+  $('[data-toggle=collapse]').click(function (e) {
+    $('[data-toggle=collapse]').parent('li').removeClass('active');
+    $(this).parent('li').toggleClass('active');
+  });
+
+  $('body').colorcontrast();
+
+  // color change
+  var darkOrLight = function(red, green, blue) {
+  var brightness;
+  brightness = (red * 299) + (green * 587) + (blue * 114);
+  brightness = brightness / 255000;
+
+  // values range from 0 to 1
+  // anything greater than 0.5 should be bright enough for dark text
+  if (brightness >= 0.5) {
+    return "dark-text";
+  } else {
+    return "light-text";
+  }
+}
+
+      // adding desc to lightbox - not functioning
+  // -----------------
+// blueimp.Gallery(
+//     document.getElementById('links'),
+//     {
+//         container: '#blueimp-gallery',
+//         onslide: function (index, slide) {
+//             var text = this.list[index].getAttribute('data-description'),
+//                 node = this.container.find('.description');
+//             node.empty();
+//             if (text) {
+//                 node[0].appendChild(document.createTextNode(text));
+//             }
+//         }
+//     }
+// );
+</script>
+
+<!-- DATA -->
+<!-- ///////////// -->
+<script src="assets/data/inspiration.json"></script>
+<script src="assets/data/basement.json"></script>
+<script src="assets/data/killer.json"></script>
+<script src="assets/data/box.json"></script>
+
+
 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
-<script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
-<script src="assets/js/grayscale.js"></script>
-<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-<script src="assets/js/bootstrap-image-gallery.js"></script>
-  </body>
-</html>
+
+        </div>
+    </body>
+
+</html>

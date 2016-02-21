@@ -1,0 +1,35 @@
+<div class="portfilio">
+  <div class="posting text-center">    
+      <h3>(DRAMAATILINE VAHEPALA) </h3>
+          <span></span>
+          <p>Saatemuusika: Edvard Grieg - Piano Concerto in A minor Op. 16</p>    
+    </div>  
+</div>
+<div id="placeholder-killer"></div>
+  <script type="text/x-handlebars-template" id="killer-template">
+    
+    
+  
+  <div class="port">
+    <ul class="links">
+    {{#images}} 
+      <li>
+        <div class="view view-fourth">
+            <img data-original="assets/images/basement/{{id}}.jpg" alt="" class="lazy"/>
+          <a href="assets/images/basement/{{id}}.jpg" data-toggle="lightbox" class="lazy" data-gallery> 
+            <div class="mask"> 
+              <div class="border">
+                <h2>{{caption}}</h2>
+                <span></span>
+                <p class="a">{{description}}</p>
+              </div>
+            </div>
+          </a> 
+        </div> 
+    </li>
+    {{/images}}
+    </ul>
+    </div>
+    </script>
+
+<!-- @include lightbox-component -->

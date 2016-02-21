@@ -1,0 +1,6 @@
+assets/images/basement/*
+node_modules/*
+dist/*
+_includes/*
+Gruntfile.js
+package.json

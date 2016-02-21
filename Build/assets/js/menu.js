@@ -18,9 +18,10 @@ $(function(){
     }
   }); 
   
-  $('#topnav nav a,#topnav h1 a,#btmnav nav a').on('click', function(e){
-    e.preventDefault(); // stop all hash(#) anchor links from loading
-  });
+  // stop all hash(#) anchor links from loading
+  // $('#topnav nav a,#topnav h1 a,#btmnav nav a').on('click', function(e){
+  //   e.preventDefault(); 
+  // });
   
   $('#navbtn').on('click', function(e){
     e.preventDefault();
@@ -28,3 +29,4 @@ $(function(){
   });
   
 });
+

@@ -1,57 +1,66 @@
+<!-- $current index -->
 
 <!-- @include head.html -->
 
-  <body id="page-top">
-    <div class="masthead">
-      <!-- @include headnav -->
-    
-      <!-- @include main-slider -->
-    </div>
 
-    <div class="page">
-      <section id="access">
-      <!-- @include accessibility -->
-      </section>
+    <body id="page-top">
+      <div style="overflow-x: hidden;">
+        <div class="masthead">
+          <div class="header_bg">
+            <!-- @include nav-sub -->
+          </div>
 
-      <section id="plans">
-        <div class="row slider">
-          <div class="col-sm-10 col-sm-offset-1">
-            <!-- @include bs-carousel -->
+          <div class="row slider slider-main">
+            <div class="col-sm-10 col-sm-offset-1">
+              <!-- @include bs-carousel -->
+              </div>
           </div>
         </div>
-      </section>
 
-      <section class="lightcolor" id="about">
-      <!-- @include about -->
-      </section>
-      
-      <section id="roadmap">
-        <!-- @include circles -->
-      </section>
-      
-      <section id="inspiration">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <!-- @include inspiration -->
+        <div class="page">
+          <section id="access">
+          <!-- @include accessibility -->
+          </section>
+
+          <!-- <div class="port">
+            <div id="map"></div>
+          </div> -->
+
+          <section class="lightcolor" id="about">
+            <!-- @include about -->
+          </section>
+
+          <!-- <section id="plans">
+            <div class="row slider">
+              <div class="col-sm-10 col-sm-offset-1">
+                @include bs-carousel-plans
+              </div>
             </div>
-          </div>
+          </section> -->
+
+          <section id="inspiration">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12">
+                  <!-- @include inspiration -->
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="dark" id="contact">
+            <!-- @include footer -->
+          </section>
+
+          <!-- <section id="roadmap">
+           @include circles
+          </section> -->
+
+          <!-- @include footer-end -->
         </div>
-      </section>
-      
 
+        <!-- @include js-main -->
+        </div>
+    </body>
 
-      <section id="contact">
-        <!-- @include footer -->
-      </section>
-      
-      <div class="port">
-        <div id="map"></div>
-      </div>
-      
-      <!-- @include footer-end -->
-    </div>
-
-    <!-- @include js-main -->
-  </body>
 </html>

@@ -1,0 +1,48 @@
+  var source   = $("#killer-template").html();
+  var template = Handlebars.compile(source); 
+
+
+  var data = { images: [
+    {
+      caption: "Tutvustame osatäitjaid",
+      id: "base-fun-1",
+      description: "The Bad"
+    },
+    {
+      caption: "Tutvustame osatäitjaid",
+      id: "base-fun-2",
+      description: "The Bad and The Good"
+    },
+    {
+      caption: "Tutvustame osatäitjaid",
+      id: "base-fun-3",
+      description: "Suhted on sõbralikud. Pane tähele Kirvest"
+    },
+    {
+      caption: "Algab",
+      id: "base-fun-5",
+      description: "Ta haarab Kirve. Ta vaatab."
+    },
+        {
+      caption: "Algab",
+      id: "base-fun-6",
+      description: "Ta hoiab Kirvest. Ta imetleb."
+    },
+    {
+      caption: "Ootamatu pööre",
+      id: "base-fun-7",
+      description: "Ta tõstab Kirve. Ta imestab."
+    },
+    {
+      caption: "Ootamatu pööre jätkub",
+      id: "base-fun-8",
+      description: "Ta ähvardab. Ta tõstab kaitseks Käed."
+    },
+    {
+      caption: "Finaal",
+      id: "base-fun-9",
+      description: "Ta anub Andestust. Ta halab Vigastust."
+    }
+    ]};
+
+  $("#placeholder-killer").html(template(data));
