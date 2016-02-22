@@ -44,66 +44,47 @@
 
       <div class="header_bg">
         <div class="header_bg">
-       <!-- http://www.bootply.com/Axbt2Y0LIQ -->
-
-<div class="container">
+      <div class="container">
 
   <div class="header">
 
     <header id="topnav">
       <nav class="navbar navbar-inverse navbar-default" role="navigation" id="topmenu" class="mainmenu">
-        
+        <!-- <div class="navbar-header">
+          <div class="navbar-brand"><a href="">Rebasemäe</a></div>
+        </div> -->
         <ul class="nav navbar-nav">
           <li class='current-parent'>
             <a class='current-parent'  href="index.html">Algus</a>
           </li>
-          <li class="dropdown">
-            <a   class="dropdown-toggle" href="#!" id="drop" data-toggle="dropdown" aria-expanded="false" aria-controls="drop">Vundament</a>
-            <ul class="nav navbar-nav dropdown-menu" aria-labelledby="drop">
-              <li><a href="#basement-todo" class="scroll">Vaegtööd</a></li>
-              <li><a href="#basement-pics" class="scroll">Pildid</a></li>
-              <li><a href="#basement-done" class="scroll">Vundament</a></li>
-              <li><a href="#surrounding-done" class="scroll">Ligipääs ja plats</a></li>
-              <li><a href="#basement-contact" class="scroll">Kontaktid</a></li>
-            </ul>
+          <li>
+            <a  href="basement.html">Vundament</a>
           </li>
           <li>
-            <a href="box.html">Karp</a>
+            <a  href="box.html">Karp</a>
           </li>
           <li class='current'>
-            <a  href="communications.html" class="current disabled">Kommunikatsioonid</a>
+            <a class='current'  href="communications.html">Kommunukatsioonid</a>
           </li>
           <li>
-            <a  href="indoor.html" class="disabled">Sisetööd</a>
+            <a  href="#"  class="disabled">Sise</a>
           </li>
           <li>
-            <a  href="finishing.html" class="disabled">Viimistlus</a>
+            <a  href="#" class="disabled">finessid</a>
           </li>
 
 
         </ul>
       </nav>
+      <!-- <h1><a class='current-parent' href="index.html">EHITUSPÄEVIK</a></h1> -->
+      <a href="#" id="navbtn">Nav Menu</a>
 
-    </header> 
+    </header>
 
   </div>
 
 </div>
 
-
-
-      <div class="container submenu">
-  <nav class="navbar navbar-default" role="navigation" id="submenu">
-    <ul class="nav navbar-nav collapse" id="basement">
-      <li><a href="index.html/#access" class="scroll">Asukoht</a></li> 
-      <li><a href="index.html/#about" class="scroll">Seletus</a></li>
-      <li><a href="index.html/#plans" class="scroll">Plaanid</a></li>
-      <li><a href="index.html/#inspiration" class="scroll">Allikad</a></li>
-      <li><a href="index.html/#contact" class="scroll">Kontakt</a></li>
-      <li  class="last"><a href="index.html/#roadmap" class="scroll">Kulg</a></li>
-    </ul>
-  </nav>
-</div>
         </div>
       </div>
 
@@ -115,7 +96,7 @@
 
         <h3>KOMMUNIKATSIOONID</h3>
         <span> </span>
-        <p><strong>Teha veel</strong></p>
+        <p><strong>Kavandatav</strong></p>
 
       </div>
       <div class="row">
@@ -137,13 +118,11 @@
             Külmumiskindel tsoon on sügavusele 60-80 cm tavaliselt. Killistiku fraktsioon mida vaja on teraga 8/16. Septiku alla kulub 150-200 mm, ümber kaevis 500mm lai samaga, kihthaaval 30 cm kaupa, vahepeal tihendades. Et inimene võiks kaane peal käia, on sinna ümber ka kruusa vaja. Autodest paiguta eemale kui ei taha betoonimisega mässata.
             <br>
             Imbtunneli alla läheb 500mm kildu 16/32 ja peale veekindel kangas et taimed kasvada saaks.
-            <br><br>
-             <a href="http://www.puhastid.ee/iseankurduv-septik-carat/ " class="button">Septik Carat S</a>
+            <br>
           </p>
         </div>
         <div class="col-md-4">
-          <h4>TODO</h4>
-            <ol>
+            <!-- <ol>
               <li>Eemaldada puujuurtelt liigne liiv võra ulatuses</li>
               <li>Hoovielekter terrassilt kasepuuni (veksellüliti, pistik, parklavalgusti) </li>
               <li>Valda teavitada septiku asukoha muutusest</li>
@@ -151,170 +130,27 @@
               <li>Krundi nimemuutus</li>
               <li>Lisapildid traktoripäevast Epult</li>
               <li>Remo: majaaluse sissepääsu müüritise viimistlus</li>
-            </ol>
-           <!-- <a href="assets/downloads/arhitektuurne.pdf">LAE ALLA ARHITEKTUURNE PROJEKT<img src="assets/images/download.png" alt=""/></a> -->
-           <br>
-
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-    </section>
-
-    <section>
-      <div class="container hide" id="basement-pics">
-        <div class="portfilio">
-  <div class="posting text-center">
-      <h3>VUNDAMENT, KELDER JA LIITUMISED, TEOSTUS </h3>
-          <span></span>
-              <!--           <p>l</p> -->
-    </div>
-</div>
-<div id="placeholder-basement"></div>
-  <script type="text/x-handlebars-template" id="basement-template">
-
-  <div class="port">
-    <ul class="links">
-    {{#slice images offset="0" limit="12"}}
-      <li>
-        <div class="view view-fourth">
-            <img data-original="assets/images/basement-290/{{id}}.jpg" class="lazy" alt="{{caption}}" >
-          <a href="assets/images/basement-1080/{{id}}.jpg" data-toggle="lightbox" data-gallery class="lazy">
-            <div class="mask">
-              <div class="border">
-                <h2>{{caption}}</h2>
-                <span></span>
-                <p class="a">{{description}}</p>
-              </div>
-            </div>
-          </a>
-        </div>
-    </li>
-  {{/slice}}
-  </ul>
-  </div>
-
-  <div class="port collapse" id="basement-next">
-    <ul class="links">
-    {{#slice images offset="12" limit="50"}}
-      <li>
-        <div class="view view-fourth">
-            <img data-original="assets/images/basement-290/{{id}}.jpg" class="lazy" alt="{{caption}}"  />
-          <a href="assets/images/basement-1080/{{id}}.jpg" data-toggle="lightbox" data-description="{{description}}" data-gallery class="lazy">
-            <div class="mask">
-              <div class="border">
-                <h2>{{caption}}</h2>
-                <span></span>
-                <p class="a">{{description}}</p>
-              </div>
-            </div>
-          </a>
-        </div>
-    </li>
-  {{/slice}}
-  </ul>
-  </div>
-
-<p class="text-center">
-  <br>
-  <a href="#basement-next" class="button" data-toggle="collapse"  data-open-text="Näita vähem pilte">Näita rohkem pilte</a><span class="badge">{{ images.length }}</span>
-  <br><br>
-</p>
-  </script>
-
-<!-- https://github.com/blueimp/Bootstrap-image-Gallery#setup -->
-<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-<div id="blueimp-gallery" class="blueimp-gallery"  data-use-bootstrap-modal="false">
-  <!-- The container for the modal slides -->
-  <div class="slides"></div>
-  <!-- Controls for the borderless lightbox -->
-  <h3 class="title"></h3>
-  <a class="prev">‹</a>
-  <a class="next">›</a>
-  <a class="close">×</a>
-  <a class="play-pause"></a>
-  <ol class="indicator"></ol>
-
-  <div class="modal fade">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" aria-hidden="true">&times;</button>
-          <h4 class="modal-title"></h4>
-        </div>
-        
-        <div class="modal-body next"></div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default pull-left prev"> <i class="glyphicon glyphicon-chevron-left"></i>Previous</button>
-          <button type="button" class="btn btn-primary next">Next<i class="glyphicon glyphicon-chevron-right"></i></button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-      </div>
-    </section>
-
-    <section class="lightcolor" id="done">
-      <div class="posting" id="basement">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center"> 
-        
-        <h3>VUNDAMENT VALMINUD</h3>
-        <span> </span>
-        <p>Aeg: august - oktoober 2014</p>
-
-      </div>  
-      <div class="row">
-        <div class="col-md-8 text-left">
-          <h4>Vundament</h4>
-          
-          <p class="columned-2">Vundament on ehitatud 20 cm paksusest FIBO 5 kergplokist, terrass ja külalistemaja 4 rida, põhihoone 6 rida, kelder 11 rida plokke. Vundamendi all on 20 cm betoonist taldmik, selle all 16 fraktsiooniga killustikupadi. Aluspind on läbivalt liiv, umbes 1,2 m sügavusel on õhuke kiht huumust, siis looduslik kruus.
-            
-            <br><br>
-            Kommunikatsioonidest on olemas välikäimla (isoleeritud paagiga), elekter 16 A, vesi salvkaevust (ehitatud sügisel 2013, sügavus 4 rõngast)
-          </p>
-          <hr>
-          <h4>Kommunikatsioonid</h4>
-          <p class="columned-2">1. <strong>Välikäimla</strong> koosneb 1 m3 mahutist
+            </ol> -->
             <br>
-            2. <strong>Salvkaev</strong> 1m läbimõõdus 4 rõngast sügav, kaevatud puurmasinaga, autor Amendero OÜ. <br>
-            3. <strong>Elekter</strong> - kilp asub maja esiküljest lõunasuunas ca 40m kaugusel metsatukas. Kilbist majani on maa all kollase kõri sees 4-sooneline alumiiniumjuhe. Ehituse ajaks on üles pandud nõuetele vastavuse tõendiga elektriku koostatud ehituskilp. <br>
-            Maja ümber on paigaldatud 70cm sügavusele 1m kaugusele vundamendist Cu 16 haljas juhe maanduseks. <br><br>
-            <strong>Õueala kommunikatsioonid </strong><br>
-            Maja tagant umbes välikäimlani on paigutatud 1 m sügavusele ühisesse kaevisesse horisontaalselt veetoru (PEM 20 mustas kõris) ja jõukaabel NYY-J 5x4 (seda ümbritseb 50/450 painduv kaablikaitsetoru), kaevise kohale on veetud hoiatuslint 30 cm sügavusele. <br>
-
-          </p>
-        </div>
-        <div class="col-md-4">
-          <h4>&nbsp;</h4>
-          <dl class="dl-horizontal">
-            <dt>Taldmik</dt>
-            <dd>Betoon</dd>
-            <dt>Vundament</dt>
-            <dd>FIBO 5 20, biarmatuur</dd>
-            <dt>Keldri niikustõke</dt>
-            <dd>Bornit Fugendicht 1</dd>
-            <dt>Krohv</dt>
-            <dd>Uninaks Siler must</dd>
-            <dt>Müürisegu</dt>
-            <dd>Vetonit ja Uninaks</dd>
-          </dl>
-           Varsti tulekul: <br><br>
-            <a href="#">VUNDAMENDI TEOSTUSJOONIS<img src="assets/images/download.png" alt=""/></a>
+            <a href="assets/downloads/vesi.pdf"  target="_blank" class="button">Veevarustuse joonis</a>
+           <br>
+            <a href="http://www.puhastid.ee/iseankurduv-septik-carat/ " class="button">Septik Carat S</a>
+            <h4>TODO</h4>
+            <br>
+            <a href="#"  target="_blank" class="button">Kütte joonis</a>
+            <br>
+            <a href="#"  target="_blank" class="button">Valgustuse joonis</a>
+            <br>
+            <a href="#"  target="_blank" class="button">Elektrivarustuse joonis</a>
+            <br>
+            <a href="#"  target="_blank" class="button">Nõrkvoolu joonis</a>
         </div>
       </div>
-      
+
     </div>
   </div>
 </div>
+
     </section>
 
       <section id="basement-contact">
@@ -404,11 +240,7 @@
       </div>
     </div>
       </section>
-    
-    <div class="port">
-      <div id="map"></div>
-    </div>
-    
+
     <div class="footer">
   <div class="container">
     <div class="row">
@@ -505,4 +337,4 @@
 <!-- ///////////// -->
 
   </body>
-</html>
+</html>

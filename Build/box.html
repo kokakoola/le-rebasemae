@@ -44,44 +44,40 @@
 
   <div class="header_bg">
     <div class="header_bg">
-       <!-- http://www.bootply.com/Axbt2Y0LIQ -->
-
-<div class="container">
+            <div class="container">
 
   <div class="header">
 
     <header id="topnav">
       <nav class="navbar navbar-inverse navbar-default" role="navigation" id="topmenu" class="mainmenu">
-
+        <!-- <div class="navbar-header">
+          <div class="navbar-brand"><a href="">Rebasemäe</a></div>
+        </div> -->
         <ul class="nav navbar-nav">
           <li class='current-parent'>
-            <a class='current-parent'  href="index.html">Algus</a> 
+            <a class='current-parent'  href="index.html">Algus</a>
           </li>
           <li>
             <a  href="basement.html">Vundament</a>
           </li>
-          <li class="dropdown">
-            <a  class="dropdown-toggle" href="#!" id="drop" data-toggle="dropdown" aria-expanded="false" aria-controls="drop">Karp</a>
-            <ul class="nav navbar-nav dropdown-menu" aria-labelledby="drop">
-              <li><a href="#access" class="scroll">Asukoht</a></li>
-              <li><a href="#about" class="scroll">Projektid</a></li>
-              <li><a href="#inspiration" class="scroll">Näidised</a></li>
-              <li><a href="#contact" class="scroll">Kontakt</a></li>
-            </ul>
+          <li class='current'>
+            <a class='current'  href="box.html">Karp</a>
           </li>
           <li>
-            <a  href="communications.html" class="disabled">Kommunikatsioonid</a>
+            <a  href="communications.html">Kommunukatsioonid</a>
           </li>
           <li>
-            <a  href="indoor.html" class="disabled">Sisetööd</a>
+            <a  href="#"  class="disabled">Sise</a>
           </li>
           <li>
-            <a  href="finishing.html" class="disabled">Viimistlus</a>
+            <a  href="#" class="disabled">finessid</a>
           </li>
 
 
         </ul>
       </nav>
+      <!-- <h1><a class='current-parent' href="index.html">EHITUSPÄEVIK</a></h1> -->
+      <a href="#" id="navbtn">Nav Menu</a>
 
     </header>
 
@@ -247,8 +243,8 @@
     {{#slice images offset="0" limit="12"}}
       <li>
         <div class="view view-fourth">
-            <img data-original="assets/images/box/{{id}}.jpg" class="lazy" alt="{{caption}}" >
-          <a href="assets/images/box/{{id}}.jpg" data-toggle="lightbox" data-gallery class="lazy">
+            <img data-original="assets/images/box/{{id}}-small.jpg" class="lazy" alt="{{caption}}" >
+          <a href="assets/images/box/{{id}}-large.jpg" data-toggle="lightbox" data-gallery class="lazy">
             <div class="mask">
               <div class="border">
                 <h2>{{caption}}</h2>
@@ -268,8 +264,8 @@
     {{#slice images offset="12" limit="50"}}
       <li>
         <div class="view view-fourth">
-            <img data-original="assets/images/box/{{id}}.jpg" class="lazy" alt="{{caption}}"  />
-          <a href="assets/images/box/{{id}}.jpg" data-toggle="lightbox" data-description="{{description}}" data-gallery class="lazy">
+            <img data-original="assets/images/box/{{id}}-small.jpg" class="lazy" alt="{{caption}}"  />
+          <a href="assets/images/box/{{id}}-large.jpg" data-toggle="lightbox" data-description="{{description}}" data-gallery class="lazy">
             <div class="mask">
               <div class="border">
                 <h2>{{caption}}</h2>
@@ -384,8 +380,6 @@
         <a href="http://werrowool.eu/files/Tselluvill_20131014.pdf"  target="_blank" class="button">Tselluvilla juhis Werrowool</a>
         <br>
         <a href="http://dspace.emu.ee/xmlui/bitstream/handle/10492/2356/K%C3%A4tlin_Smoljakova_2015MA_EH_t%C3%A4istekst.pdf?sequence=1&isAllowed=y" target="_blank" class="button">Magistritöö tselluvillast</a>
-        <br>
-        <a href="assets/downloads/vesi.pdf"  target="_blank" class="button">Veevarustuse joonis</a>
       </div>
     </div>
 
@@ -395,9 +389,75 @@
 
   </section>
 
+  <section>
+    <div class="container" id="location-gallery">
+      <div class="portfilio">
+  <div class="posting text-center">
+    <h3>LIGIPÄÄSUTEE</h3>
+    <span></span>
+    <!--           <p>l</p> -->
+  </div>
+</div>
+<div id="placeholder-location"></div>
+<script type="text/x-handlebars-template" id="location-template">
+
+  <div class="port">
+    <ul class="links">
+      {{#slice images offset="0" limit="12"}}
+      <li>
+        <div class="view view-fourth">
+          <img data-original="assets/images/location/{{id}}-small.jpg" class="lazy" alt="{{caption}}" >
+          <a href="assets/images/location/{{id}}-large.jpg" data-toggle="lightbox" data-gallery class="lazy">
+            <div class="mask">
+              <div class="border">
+                <h2>{{caption}}</h2>
+                <span></span>
+                <p class="a">{{description}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      {{/slice}}
+    </ul>
+  </div>
+
+</script>
+
+<!-- https://github.com/blueimp/Bootstrap-image-Gallery#setup -->
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery"  data-use-bootstrap-modal="false">
+  <!-- The container for the modal slides -->
+  <div class="slides"></div>
+  <!-- Controls for the borderless lightbox -->
+  <h3 class="title"></h3>
+  <a class="prev">‹</a>
+  <a class="next">›</a>
+  <a class="close">×</a>
+  <a class="play-pause"></a>
+  <ol class="indicator"></ol>
+
+  <div class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" aria-hidden="true">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        
+        <div class="modal-body next"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left prev"> <i class="glyphicon glyphicon-chevron-left"></i>Previous</button>
+          <button type="button" class="btn btn-primary next">Next<i class="glyphicon glyphicon-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-
+    </div>
+  </section>
 
   <section class="dark" id="box-contact">
     <div class="footer-top">
@@ -586,5 +646,6 @@
 
 
 <script src="assets/data/box.json"></script>
+<script src="assets/data/location.json"></script>
 </body>
 </html>

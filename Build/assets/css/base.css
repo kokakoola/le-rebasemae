@@ -5065,7 +5065,6 @@ button.close {
   left: -50px;
   z-index: 10; }
   .slidePrev span {
-    background-image: url(../images/sliderarrows.png);
     width: 60px;
     height: 60px;
     float: left;
@@ -5079,7 +5078,7 @@ button.close {
   right: -50px;
   z-index: 10; }
   .slideNext span {
-    background-image: url(../images/sliderarrows.png);
+    background-image: url("../images/sliderarrows.png");
     width: 60px;
     height: 60px;
     float: left;
@@ -7576,7 +7575,7 @@ body {
     top: 0;
     width: 32px;
     padding: 2.5em 0em;
-    background: url("../images/menu-nav.png") center no-repeat;
+    background: url("../img/menu-nav.png") center no-repeat;
     text-indent: -99999px;
     overflow: hidden;
     height: 22px; }
@@ -7782,7 +7781,7 @@ section:not(.dark) {
   height: auto;
   background-size: cover;
   padding: 1% 0;
-  background: url(../images/skills.jpg) no-repeat center center;
+  background: url("assets/images/skills.jpg") no-repeat center center;
   background-color: #222; }
   .skills h4 {
     font-size: 1.1em;
@@ -8555,7 +8554,7 @@ div.team-member {
   height: 32px;
   border: none;
   text-indent: 100%;
-  background: url(../images/move-up.png) no-repeat right top; }
+  background: url(../img/move-up.png) no-repeat right top; }
 
 /*--media-queries--*/
 @media only screen and (max-width: 1440px) {

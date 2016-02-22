@@ -5,7 +5,7 @@
   });
 
   var source   = $("#inspiration-template").html();
-  var template = Handlebars.compile(source); 
+  var template = Handlebars.compile(source);
 
 
   var data = { images: [
@@ -40,19 +40,14 @@
       description: "Villa in Tsurudamari Karuizawa"
     },
     {
-      caption: "Katus",
-      id: "1317218740-brn-07",
-      description: "House Morran by Johannes Norlander Arkitektur, Sweden"
+      caption: "Terrass",
+      id: "terrass",
+      description: "...ja trepp"
     },
     {
-      caption: "Katus",
-      id: "1317218751-brn-08",
-      description: "House Morran by Johannes Norlander Arkitektur, Sweden"
-    },
-    {
-    caption: "Katus",
-      id: "1317218733-brn-05",
-      description: "House Morran by Johannes Norlander Arkitektur, Sweden"
+      caption: "Terrass",
+      id: "terrass1",
+      description: "...ja trepp"
     }
     ]};
 

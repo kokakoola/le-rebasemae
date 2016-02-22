@@ -1,0 +1,73 @@
+Handlebars.registerHelper('leftTrim', function(text) {
+  text = text.replace(/<.*?>/g," ").trim();
+  if(text.length > 20) return text.substring(0,20) +"...";
+  else return text;
+});
+
+Handlebars.registerHelper('slice', function(context, block) {
+  var ret = "",
+      offset = parseInt(block.hash.offset) || 0,
+      limit = parseInt(block.hash.limit) || 5,
+      i = (offset < context.length) ? offset : 0,
+      j = ((limit + offset) < context.length) ? (limit + offset) : context.length;
+
+  for(i,j; i<j; i++) {
+    ret += block.fn(context[i]);
+  }
+
+  return ret;
+});
+
+  var source   = $("#location-template").html();
+  var template = Handlebars.compile(source);
+
+
+  var data = { "images": [
+    {
+      "caption": "Sissesõidutee",
+      "id": "IMG_1700",
+      "description": "Roomu poolt"
+    },
+    {
+      "caption": "Sissesõidutee",
+      "id": "IMG_1701",
+      "description": "Roomu poolt"
+    },
+    {
+      "caption": "Sissesõidutee",
+      "id": "IMG_1702",
+      "description": "Roomu poolt"
+    },
+    {
+      "caption": "Sissesõidutee",
+      "id": "IMG_1703",
+      "description": "Roomu poolt"
+    },
+    {
+      "caption": "Sissesõidutee",
+      "id": "IMG_1704",
+      "description": "Roomu poolt"
+    },
+    {
+      "caption": "Sissesõidutee",
+      "id": "IMG_1706",
+      "description": "Roomu poolt"
+    },
+    {
+      "caption": "Sissesõidutee",
+      "id": "IMG_1707",
+      "description": "Roomu poolt"
+    },
+    {
+      "caption": "Sissesõidutee",
+      "id": "IMG_1709",
+      "description": "Roomu poolt"
+    },
+    {
+      "caption": "Sissesõidutee",
+      "id": "IMG_1710",
+      "description": "Roomu poolt"
+    }
+    ]};
+
+  $("#placeholder-location").html(template(data));

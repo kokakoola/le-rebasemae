@@ -44,63 +44,45 @@
 
       <div class="header_bg">
         <div class="header_bg">
-       <!-- http://www.bootply.com/Axbt2Y0LIQ -->
-
-<div class="container">
+      <div class="container">
 
   <div class="header">
 
     <header id="topnav">
       <nav class="navbar navbar-inverse navbar-default" role="navigation" id="topmenu" class="mainmenu">
-        
+        <!-- <div class="navbar-header">
+          <div class="navbar-brand"><a href="">Rebasemäe</a></div>
+        </div> -->
         <ul class="nav navbar-nav">
           <li class='current-parent'>
             <a class='current-parent'  href="index.html">Algus</a>
           </li>
-          <li class="dropdown">
-            <a   class="dropdown-toggle" href="#!" id="drop" data-toggle="dropdown" aria-expanded="false" aria-controls="drop">Vundament</a>
-            <ul class="nav navbar-nav dropdown-menu" aria-labelledby="drop">
-              <li><a href="#basement-todo" class="scroll">Vaegtööd</a></li>
-              <li><a href="#basement-pics" class="scroll">Pildid</a></li>
-              <li><a href="#basement-done" class="scroll">Vundament</a></li>
-              <li><a href="#surrounding-done" class="scroll">Ligipääs ja plats</a></li>
-              <li><a href="#basement-contact" class="scroll">Kontaktid</a></li>
-            </ul>
+          <li class='current'>
+            <a class='current'  href="basement.html">Vundament</a>
           </li>
           <li>
-            <a href="box.html">Karp</a>
+            <a  href="box.html">Karp</a>
           </li>
           <li>
-            <a  href="communications.html" class="disabled">Kommunikatsioonid</a>
+            <a  href="communications.html">Kommunukatsioonid</a>
           </li>
           <li>
-            <a  href="indoor.html" class="disabled">Sisetööd</a>
+            <a  href="#"  class="disabled">Sise</a>
           </li>
           <li>
-            <a  href="finishing.html" class="disabled">Viimistlus</a>
+            <a  href="#" class="disabled">finessid</a>
           </li>
 
 
         </ul>
       </nav>
+      <!-- <h1><a class='current-parent' href="index.html">EHITUSPÄEVIK</a></h1> -->
+      <a href="#" id="navbtn">Nav Menu</a>
 
-    </header> 
+    </header>
 
   </div>
 
-</div>
-
-
-
-      <div class="container submenu">
-  <nav class="navbar navbar-default" role="navigation" id="submenu">
-    <ul class="nav navbar-nav collapse" id="basement">
-      <li><a href="#basement-todo" class="scroll">ToDo</a></li>
-      <li><a href="#basement-pics" class="scroll">Kulg</a></li>
-      <li><a href="#basement-done" class="scroll">Majas valmis</a></li>
-      <li><a href="#surrounding-done" class="last scroll">Ümbrus valmis</a></li>
-    </ul>
-  </nav>
 </div>
 
         </div>
@@ -168,7 +150,7 @@
     </section>
 
     <section>
-      <div class="container" id="basement-pics">
+      <div class="container" id="basement-gallery">
         <div class="portfilio">
   <div class="posting text-center">
       <h3>VUNDAMENT, KELDER JA LIITUMISED, TEOSTUS </h3>
@@ -184,8 +166,8 @@
     {{#slice images offset="0" limit="12"}}
       <li>
         <div class="view view-fourth">
-            <img data-original="assets/images/basement-290/{{id}}.jpg" class="lazy" alt="{{caption}}" >
-          <a href="assets/images/basement-1080/{{id}}.jpg" data-toggle="lightbox" data-gallery class="lazy">
+            <img data-original="assets/images/basement/{{id}}-small.jpg" class="lazy" alt="{{caption}}" >
+          <a href="assets/images/basement/{{id}}-large.jpg" data-toggle="lightbox" data-gallery class="lazy">
             <div class="mask">
               <div class="border">
                 <h2>{{caption}}</h2>
@@ -205,8 +187,8 @@
     {{#slice images offset="12" limit="50"}}
       <li>
         <div class="view view-fourth">
-            <img data-original="assets/images/basement-290/{{id}}.jpg" class="lazy" alt="{{caption}}"  />
-          <a href="assets/images/basement-1080/{{id}}.jpg" data-toggle="lightbox" data-description="{{description}}" data-gallery class="lazy">
+            <img data-original="assets/images/basement/{{id}}-small.jpg" class="lazy" alt="{{caption}}"  />
+          <a href="assets/images/basement/{{id}}-large.jpg" data-toggle="lightbox" data-description="{{description}}" data-gallery class="lazy">
             <div class="mask">
               <div class="border">
                 <h2>{{caption}}</h2>
@@ -304,7 +286,7 @@
     </section>
 
     <section>
-      <div class="container" id="kanal-pics">
+      <div class="container" id="kanal-gallery">
         <div class="portfilio">
   <div class="posting text-center">
     <h3>KANALISATSIOONI TEOSTUS </h3>
@@ -320,8 +302,8 @@
       {{#slice images offset="0" limit="12"}}
       <li>
         <div class="view view-fourth">
-          <img data-original="assets/images/kanal/{{id}}.jpg" class="lazy" alt="{{caption}}" >
-          <a href="assets/images/kanal/{{id}}.jpg" data-toggle="lightbox" data-gallery class="lazy">
+          <img data-original="assets/images/kanal/{{id}}-small.jpg" class="lazy" alt="{{caption}}" >
+          <a href="assets/images/kanal/{{id}}-large.jpg" data-toggle="lightbox" data-gallery class="lazy">
             <div class="mask">
               <div class="border">
                 <h2>{{caption}}</h2>
@@ -335,7 +317,7 @@
       {{/slice}}
     </ul>
   </div>
-  
+
 </script>
 
 <!-- https://github.com/blueimp/Bootstrap-image-Gallery#setup -->

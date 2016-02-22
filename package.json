@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "dependencies": {
     "grunt": "~0.4.1",
-    "grunt-responsive-images": "^0.1.2",
+    "grunt-responsive-images": "^0.1.2"
+  },
+  "devDependencies": {
+    "grunt-cli": "^0.1.13"
   }
-
 }
