@@ -25,34 +25,46 @@
 
   var data = { "images": [
     {
-      "caption": "Siseviimistlus",
-      "id": "katuseakna-pale",
-      "description": "Katuseakna põse ja katuslae viimistlus"
+      "folder": "detail",
+      "caption": "Tugipostide viimistlus",
+      "id": "10",
+      "description": "Tapitud"
     },
     {
-      "caption": "katuseakna paled",
-      "id": "katuseakna-pale-kald",
-      "description": "Kaldus paleviimistlus annab enam päikest"
+      "folder": "detail",
+      "caption": "Tugipostide viimistlus",
+      "id": "13",
+      "description": "Tapitud"
     },
     {
-      "caption": "Pliit",
-      "id": "House_Riihi_Jussi_Tiainen_21",
-      "description": "Ilusa proportsiooniga krohvpliit"
+      "folder": "detail",
+      "caption": "Akende põsed",
+      "id": "aknaposk",
+      "description": "Söögitoa aken istutav"
     },
     {
+      "folder": "detail",
+      "caption": "Akende põsed",
+      "id": "stonorov-house-outside-portrait-thumbnail",
+      "description": ""
+    },
+    {
+      "folder": "detail",
       "caption": "Akende paled seespoolt",
       "id": "House_Riihi_Jussi_Tiainen_20",
       "description": "Aken ja sein sama värvi/materjalin"
     },
     {
-      "caption": "Siseviimistlus",
+      "folder": "detail",
+      "caption": "Toaredel",
       "id": "RRA_Herfell-14©Lars_Petter_Pettersen+1",
       "description": "Äge onn www.reiulframstadarchitects.com/micro-cluster-cabins"
     },
     {
-      "caption": "Siseviimistlus",
-      "id": "IMG_1990",
-      "description": "Lai aknalaud"
+      "folder": "detail",
+      "caption": "Katuseakna pale",
+      "id": "katuseakna-pale-kald",
+      "description": "Kasevineet, kaldnurk"
     }
     ]};
 
