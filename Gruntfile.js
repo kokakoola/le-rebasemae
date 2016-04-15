@@ -18,16 +18,11 @@ module.exports = function(grunt) {
           files: [{
             expand: true,
             src: [
-              'images/kanal/**/*.{jpg,gif,png}',
-              'images/interior/**/*.{jpg,gif,png}',
-              'images/inspiration/**/*.{jpg,gif,png}',
-              'images/interior/**/*.{jpg,gif,png}',
-              'images/box/**/*.{jpg,gif,png}',
-              'images/basement/**/*.{jpg,gif,png}',
-              'images/location/**/*.{jpg,gif,png}', 
+              'images/IDEA/**/*.{jpg,gif,png}'
+
             ],
-            cwd: 'src/',
-            dest: 'assets/'
+            cwd: 'original/',
+            dest: 'dest/'
           }]
         }
     }
