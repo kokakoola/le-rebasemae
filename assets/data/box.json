@@ -38,6 +38,24 @@
     },
     {
       "folder": "detail",
+      "caption": "Diagonaaltalad",
+      "id": "diagonaaltalad",
+      "description": ""
+    },
+    {
+      "folder": "detail",
+      "caption": "Diagonaaltalad",
+      "id": "diagonaaltalad1",
+      "description": ""
+    },
+    {
+      "folder": "detail",
+      "caption": "Diagonaaltalad",
+      "id": "diagonaaltalad2",
+      "description": ""
+    },
+    {
+      "folder": "detail",
       "caption": "Akende põsed",
       "id": "aknaposk",
       "description": "Söögitoa aken istutav"

@@ -21,7 +21,7 @@ module.exports = function(grunt) {
               'images/IDEA/**/*.{jpg,gif,png}'
 
             ],
-            cwd: 'original/',
+            cwd: 'dist/',
             dest: 'dest/'
           }]
         }

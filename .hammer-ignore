@@ -4,3 +4,5 @@ _includes/*
 Gruntfile.js
 package.json
 src/*
+original/*
+README.html

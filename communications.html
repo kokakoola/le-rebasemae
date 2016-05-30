@@ -1,25 +1,52 @@
-<!-- $current basement -->
+<!-- $current communication -->
 
 <!-- @include head.html -->
 
-  <body id="page-top">
+<body id="page-top">
 
-      <div class="header_bg">
-        <div class="header_bg">
+  <div class="header_bg">
+    <div class="header_bg">
       <!-- @include nav-simple -->
+    </div>
+  </div>
+
+  <section class="lightcolor" id="todo">
+    <div class="posting" id="basement">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <h3>KOMMUNIKATSIOONID</h3>
+            <span> </span>
+            <p><strong>Kavandatav</strong></p>
+          </div>
         </div>
+        <!-- @include comm-heating -->
       </div>
+    </div>
+  </section>
 
-    <section class="lightcolor" id="todo">
+  <section>
+    <div class="container" id="heating-gallery">
+      <!-- @include heating-pics -->
+    </div>
+  </section>
+
+  <section class="posting">
+    <div class="container" id="comm-todo">
       <!-- @include comm-todo -->
-    </section>
+    </div>
+  </section>
 
-      <section id="basement-contact">
-        <!-- @include comm-footer -->
-      </section>
 
-    <!-- @include footer-end -->
 
-    <!-- @include js-main -->
-  </body>
+  <section id="communication-contact">
+    <!-- @include comm-footer -->
+  </section>
+
+  <!-- @include footer-end -->
+
+  <!-- @include js-main -->
+</body>
+<script src="assets/data/heating.json"></script>
 </html>

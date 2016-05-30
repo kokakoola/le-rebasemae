@@ -1,19 +1,21 @@
 <div class="portfilio">
   <div class="posting text-center">
-      <h3>DETAILID </h3>
-          <span></span>
-              <!--           <p>l</p> -->
-    </div>
+    <h3>DETAILID </h3>
+    <span></span>
+    <p>Sõlmed visuaalselt</p>
+    <span></span>
+    <br><br>
+  </div>
 </div>
 <div id="placeholder-box"></div>
-  <script type="text/x-handlebars-template" id="box-template">
+<script type="text/x-handlebars-template" id="box-template">
 
   <div class="port">
     <ul class="links">
-    {{#slice images offset="0" limit="12"}}
+      {{#slice images offset="0" limit="12"}}
       <li>
         <div class="view view-fourth">
-            <img data-original="assets/images/IDEA/{{folder}}/{{id}}-small.jpg" class="lazy" alt="{{caption}}" >
+          <img data-original="assets/images/IDEA/{{folder}}/{{id}}-small.jpg" class="lazy" alt="{{caption}}" >
           <a href="assets/images/IDEA/{{folder}}/{{id}}-large.jpg" data-toggle="lightbox" data-gallery class="lazy">
             <div class="mask">
               <div class="border">
@@ -24,17 +26,17 @@
             </div>
           </a>
         </div>
-    </li>
-  {{/slice}}
-  </ul>
+      </li>
+      {{/slice}}
+    </ul>
   </div>
 
   <div class="port collapse" id="basement-next">
     <ul class="links">
-    {{#slice images offset="12" limit="50"}}
+      {{#slice images offset="12" limit="50"}}
       <li>
         <div class="view view-fourth">
-            <img data-original="assets/images/IDEA/{{folder}}/{{id}}-small.jpg" class="lazy" alt="{{caption}}"  />
+          <img data-original="assets/images/IDEA/{{folder}}/{{id}}-small.jpg" class="lazy" alt="{{caption}}"  />
           <a href="assets/images/IDEA/{{folder}}/{{id}}-large.jpg" data-toggle="lightbox" data-description="{{description}}" data-gallery class="lazy">
             <div class="mask">
               <div class="border">
@@ -45,16 +47,16 @@
             </div>
           </a>
         </div>
-    </li>
-  {{/slice}}
-  </ul>
+      </li>
+      {{/slice}}
+    </ul>
   </div>
 
-<!-- <p class="text-center">
+  <!-- <p class="text-center">
   <br>
   <a href="#basement-next" class="button" data-toggle="collapse"  data-open-text="Näita vähem pilte">Näita rohkem pilte</a><span class="badge">{{ images.length }}</span>
   <br><br>
 </p> -->
-  </script>
+</script>
 
 <!-- @include lightbox-component -->

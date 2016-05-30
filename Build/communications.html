@@ -6,8 +6,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
   </script>
-  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300, 400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="assets/css/blueimp-gallery.min.css" type="text/css" media="all">
+  <!-- <link href='http://fonts.googleapis.com/css?family=Ubuntu:300, 400,700' rel='stylesheet' type='text/css'> -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>  <link rel="stylesheet" href="assets/css/blueimp-gallery.min.css" type="text/css" media="all">
   <link href="assets/css/bootstrap-image-gallery.css" rel="stylesheet" type="text/css" media="all" />
   <link href="assets/css/base.css" rel="stylesheet" type="text/css" media="all" />
   <script type="text/javascript" src="assets/js/modernizr.custom.28468.js"></script>
@@ -40,10 +40,11 @@
 
 </head>
 
-  <body id="page-top">
 
-      <div class="header_bg">
-        <div class="header_bg">
+<body id="page-top">
+
+  <div class="header_bg">
+    <div class="header_bg">
       <div class="container">
 
   <div class="header">
@@ -64,13 +65,13 @@
             <a  href="box.html">Karp</a>
           </li>
           <li class='current'>
-            <a class='current'  href="communications.html">Kommunukatsioonid</a>
+            <a class='current'  href="communications.html">Üldine</a>
           </li>
           <li>
-            <a  href="#"  class="disabled">Sise</a>
+            <a  href="#"  class="disabled">Viimistus</a>
           </li>
           <li>
-            <a  href="#" class="disabled">finessid</a>
+            <a  href="#" class="disabled">Muu</a>
           </li>
 
 
@@ -85,21 +86,153 @@
 
 </div>
 
+    </div>
+  </div>
+
+  <section class="lightcolor" id="todo">
+    <div class="posting" id="basement">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <h3>KOMMUNIKATSIOONID</h3>
+            <span> </span>
+            <p><strong>Kavandatav</strong></p>
+          </div>
+        </div>
+            <div class="row">
+        <div class="col-md-8">
+
+          <h4>Pliit ja ahi</h4>
+          <p class="columned-2">
+            Tellisahi ja puupliit
+          </p>
+        </div>
+        <div class="col-md-4">
+          <dl class="dl-horizontal">
+            <dt>Arvestuslik köetav pind </dt>
+            <dd>90 m2</dd>
+            <dt>Korsten</dt>
+            <dd>6,3 m Rondo Plus 2 lõõriline + ventlõõr</dd>
+            <dt>Ahi</dt>
+            <dd>90x90 cm krohvitud tellisahi</dd>
+            <dt>Pliit</dt>
+            <dd>65x110 cm keraamilise plaadiga</dd>
+            <dt>Lisaõhk</dt>
+            <dd>160 mm vent toru ahju vundamendis</dd>
+          </dl>
+            <a href="assets/downloads/kyte.pdf"  target="_blank" class="button">Kütte joonis</a>
         </div>
       </div>
 
-    <section class="lightcolor" id="todo">
-      <div class="posting" id="basement">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-
-        <h3>KOMMUNIKATSIOONID</h3>
-        <span> </span>
-        <p><strong>Kavandatav</strong></p>
-
       </div>
-      <div class="row">
+    </div>
+  </section>
+
+  <section>
+    <div class="container" id="heating-gallery">
+      <div class="portfolio">
+  <br>
+  <h4>Terrass lae ja seintega</h4>
+  <p class="columned-2">
+    Betoonpostid terrassile. Terrassi laudis ilmselt sama tooni mis hoone seinad? Terrassi põranda tasapind 10 cm madalam kui toa põrand et ei tekiks lume kuhjumist vastu akent. Sama eesmärki täidab klaasuste varvaslaud - kas vajalik? Praegu pole nii oonistatud projekti.
+  </p>
+  <div class="posting text-center">
+    <h3>AHI JA PLIIT </h3>
+    <span></span>
+    <!--           <p>l</p> -->
+  </div>
+</div>
+<div id="placeholder-heating"></div>
+<script type="text/x-handlebars-template" id="heating-template">
+
+  <div class="port">
+    <ul class="links">
+      {{#slice images offset="0" limit="12"}}
+      <li>
+        <div class="view view-fourth">
+          <img data-original="assets/images/IDEA/{{folder}}/{{id}}-small.jpg" class="lazy" alt="{{caption}}" >
+          <a href="assets/images/IDEA/{{folder}}/{{id}}-large.jpg" data-toggle="lightbox" data-gallery class="lazy">
+            <div class="mask">
+              <div class="border">
+                <h2>{{caption}}</h2>
+                <span></span>
+                <p class="a">{{description}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      {{/slice}}
+    </ul>
+  </div>
+
+  <div class="port collapse" id="basement-next">
+    <ul class="links">
+      {{#slice images offset="12" limit="50"}}
+      <li>
+        <div class="view view-fourth">
+          <img data-original="assets/images/IDEA/{{folder}}/{{id}}-small.jpg" class="lazy" alt="{{caption}}"  />
+          <a href="assets/images/IDEA/{{folder}}/{{id}}-large.jpg" data-toggle="lightbox" data-description="{{description}}" data-gallery class="lazy">
+            <div class="mask">
+              <div class="border">
+                <h2>{{caption}}</h2>
+                <span></span>
+                <p class="a">{{description}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      {{/slice}}
+    </ul>
+  </div>
+
+  <!-- <p class="text-center">
+  <br>
+  <a href="#basement-next" class="button" data-toggle="collapse"  data-open-text="Näita vähem pilte">Näita rohkem pilte</a><span class="badge">{{ images.length }}</span>
+  <br><br>
+</p> -->
+</script>
+
+<!-- https://github.com/blueimp/Bootstrap-image-Gallery#setup -->
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery"  data-use-bootstrap-modal="false">
+  <!-- The container for the modal slides -->
+  <div class="slides"></div>
+  <!-- Controls for the borderless lightbox -->
+  <h3 class="title"></h3>
+  <a class="prev">‹</a>
+  <a class="next">›</a>
+  <a class="close">×</a>
+  <a class="play-pause"></a>
+  <ol class="indicator"></ol>
+
+  <div class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" aria-hidden="true">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        
+        <div class="modal-body next"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left prev"> <i class="glyphicon glyphicon-chevron-left"></i>Previous</button>
+          <button type="button" class="btn btn-primary next">Next<i class="glyphicon glyphicon-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </section>
+
+  <section class="posting">
+    <div class="container" id="comm-todo">
+          <div class="row">
         <div class="col-md-8">
 
           <h4>Septik</h4>
@@ -153,13 +286,6 @@
             <a href="http://www.puhastid.ee/iseankurduv-septik-carat/ " class="button">Septik Carat S</a>
             <br>
             <a href="assets/downloads/kyte.pdf"  target="_blank" class="button">Kütte joonis</a>
-            <h4>TODO</h4>
-            <br>
-            <a href="#"  target="_blank" class="button">Valgustuse joonis</a>
-            <br>
-            <a href="#"  target="_blank" class="button">Elektrivarustuse joonis</a>
-            <br>
-            <a href="#"  target="_blank" class="button">Nõrkvoolu joonis</a>
         </div>
       </div>
       <div class="row">
@@ -209,13 +335,12 @@ Floodlights
       </div>
 
     </div>
-  </div>
-</div>
+  </section>
 
-    </section>
 
-      <section id="basement-contact">
-        <div class="footer-top">
+
+  <section id="communication-contact">
+    <div class="footer-top">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
@@ -300,9 +425,9 @@ Floodlights
         </div>
       </div>
     </div>
-      </section>
+  </section>
 
-    <div class="footer">
+  <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -317,7 +442,7 @@ Floodlights
 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
 
 
-    <script src='assets/js/jquery.min.js'></script>
+  <script src='assets/js/jquery.min.js'></script>
 <script src='assets/js/handlebars-v2.0.0.js'></script>
 <script src='assets/js/bootstrap.js'></script>
 <script src='assets/js/menu.js'></script>
@@ -397,5 +522,6 @@ Floodlights
 <!-- DATA -->
 <!-- ///////////// -->
 
-  </body>
+</body>
+<script src="assets/data/heating.json"></script>
 </html>

@@ -1,0 +1,53 @@
+  Handlebars.registerHelper('leftTrim', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 20) return text.substring(0,20) +"...";
+    else return text;
+  });
+
+  Handlebars.registerHelper('slice', function(context, block) {
+    var ret = "",
+        offset = parseInt(block.hash.offset) || 0,
+        limit = parseInt(block.hash.limit) || 5,
+        i = (offset < context.length) ? offset : 0,
+        j = ((limit + offset) < context.length) ? (limit + offset) : context.length;
+
+    for(i,j; i<j; i++) {
+      ret += block.fn(context[i]);
+    }
+
+    return ret;
+  });
+
+
+  var source   = $("#heating-template").html();
+  var template = Handlebars.compile(source);
+
+
+  var data = { "images": [
+    {
+      "folder": "heating",
+      "caption": "Üldmulje",
+      "id": "355a99196a705aa15f8ab9cec8cbda18",
+      "description": "Hästi lihtne"
+    },
+    {
+      "folder": "heating",
+      "caption": "Pliit",
+      "id": "a89417be0c31cef574c5c81c75d04d1b",
+      "description": ""
+    },
+    {
+      "folder": "heating",
+      "caption": "Pinnaviimistlus",
+      "id": "ef5943bc98bca9b3c71e433160133908",
+      "description": ""
+    },
+    {
+      "folder": "heating",
+      "caption": "Pliidi proportsioon",
+      "id": "House_Riihi_Jussi_Tiainen_21",
+      "description": ""
+    }
+    ]};
+
+  $("#placeholder-heating").html(template(data));

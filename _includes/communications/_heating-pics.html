@@ -1,0 +1,65 @@
+<div class="portfolio">
+  <br>
+  <h4>Terrass lae ja seintega</h4>
+  <p class="columned-2">
+    Betoonpostid terrassile. Terrassi laudis ilmselt sama tooni mis hoone seinad? Terrassi põranda tasapind 10 cm madalam kui toa põrand et ei tekiks lume kuhjumist vastu akent. Sama eesmärki täidab klaasuste varvaslaud - kas vajalik? Praegu pole nii oonistatud projekti.
+  </p>
+  <div class="posting text-center">
+    <h3>AHI JA PLIIT </h3>
+    <span></span>
+    <!--           <p>l</p> -->
+  </div>
+</div>
+<div id="placeholder-heating"></div>
+<script type="text/x-handlebars-template" id="heating-template">
+
+  <div class="port">
+    <ul class="links">
+      {{#slice images offset="0" limit="12"}}
+      <li>
+        <div class="view view-fourth">
+          <img data-original="assets/images/IDEA/{{folder}}/{{id}}-small.jpg" class="lazy" alt="{{caption}}" >
+          <a href="assets/images/IDEA/{{folder}}/{{id}}-large.jpg" data-toggle="lightbox" data-gallery class="lazy">
+            <div class="mask">
+              <div class="border">
+                <h2>{{caption}}</h2>
+                <span></span>
+                <p class="a">{{description}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      {{/slice}}
+    </ul>
+  </div>
+
+  <div class="port collapse" id="basement-next">
+    <ul class="links">
+      {{#slice images offset="12" limit="50"}}
+      <li>
+        <div class="view view-fourth">
+          <img data-original="assets/images/IDEA/{{folder}}/{{id}}-small.jpg" class="lazy" alt="{{caption}}"  />
+          <a href="assets/images/IDEA/{{folder}}/{{id}}-large.jpg" data-toggle="lightbox" data-description="{{description}}" data-gallery class="lazy">
+            <div class="mask">
+              <div class="border">
+                <h2>{{caption}}</h2>
+                <span></span>
+                <p class="a">{{description}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+      {{/slice}}
+    </ul>
+  </div>
+
+  <!-- <p class="text-center">
+  <br>
+  <a href="#basement-next" class="button" data-toggle="collapse"  data-open-text="Näita vähem pilte">Näita rohkem pilte</a><span class="badge">{{ images.length }}</span>
+  <br><br>
+</p> -->
+</script>
+
+<!-- @include lightbox-component -->
